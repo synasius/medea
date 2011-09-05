@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Canvas Examples</title>
+<script type="text/javascript">
+window.onload = function () {
+    var draw = function (c) {
+        c.fillStyle = "red";
+        c.fillRect(50, 100, 100, 100);
+        c.fillStyle = "green";
+        c.fillRect(150, 100, 100, 100);
+        c.fillStyle = "blue";
+        c.fillRect(250, 100, 100, 100);        
+    };
+    var canvas = document.getElementById("paint");
+
+    if (canvas.getContext) {
+        var context = canvas.getContext("2d");
+        draw(context);
+    }
+};    
+</script>
+</head>
+<body>
+    <h1>Canvas</h1>
+    <canvas id="paint" width="400px" height="300px" style="border: 1px solid"> 
+    </canvas>
+    <script type="text/javascript">
+    
+    </script>
+</body>
+</html>

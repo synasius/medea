@@ -1,0 +1,185 @@
+\documentclass[a4paper,12pt]{report}
+%%%%%% Definizioni:
+\def\titolotesi{Implementazione di un editor per mondi virtuali con tecnologia X3DOM} 
+\def\laureando{Federico Frenguelli}
+\def\annoaccademico{2010--2011}
+\def\dedica{}
+%%%%%% File previsti in input:
+%% introduzione.tex    (deve contenere solo il testo, senza \chapter{})
+%% capitolo1.tex       (deve iniziare con \chapter{titolo capitolo})
+%% capitolo2.tex                           "
+%% conclusioni.tex     (deve contenere solo il testo, senza \chapter{})
+%% appendice.tex       (deve contenere solo il testo, senza \chapter{})
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+\title{\begin{large}\textbf{\titolotesi}\end{large}}
+\author{\laureando}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{courier}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{url}
+\usepackage{setspace}
+
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+\lstnewenvironment{mylisting}[3]{
+\singlespacing\lstset{
+   basicstyle=\small\sffamily,
+   columns=fullflexible,
+   commentstyle=\color{gray}\textit,
+   numberstyle=\tiny,
+   breaklines=true,
+   frame=b,
+   numberstyle=\tiny,
+   numbersep=5pt,
+   framextopmargin=10pt,
+   morecomment=[l]{//},
+   stringstyle=\color{gray}\textit,
+   belowskip=10pt,
+   belowskip=10pt,
+   caption=#2,
+   language=#1,
+   label=#3%
+}}
+{}
+
+\linespread{1.6}
+\graphicspath{{./imgs/}}
+\fancyhf{}
+\fancyhead[RO]{\the\chaptermark}
+%\fancyhead[LE,RO]{\bfseries\thepage \hfil}
+\usepackage{epsfig}%
+\pagenumbering{roman}
+%\usepackage{setspace}
+\newlength\sinistra
+\newlength\corpo
+\newlength\pagina
+\setlength {\pagina} {21cm}
+\setlength {\sinistra} {1.46cm}
+\setlength {\corpo} {13.5cm}
+\textwidth \the\corpo
+\hoffset \the\sinistra
+\paperwidth \the\pagina
+
+\begin{document}
+\begin{titlepage}
+%\maketitle
+\begin{center}
+\textsc{\Large Universit\`{a} degli Studi di Perugia}\medskip\\
+
+{\Large Facolt\`{a} di Scienze Matematiche, Fisiche e Naturali}\medskip\\
+
+\rule{10mm}{0.01mm}\medskip\\
+
+{\small Corso di Laurea in }\medskip
+
+\textsc{Informatica}\medskip\\
+
+%\vspace*{12mm}
+
+\vspace*{3mm}
+
+\includegraphics[width=3cm]{logounipg.png}
+
+\vspace*{3mm}
+
+\Large Tesi di Laurea \par\bigskip
+
+%\vfill
+
+%\vspace*{0.3cm}
+
+{\large \bf \titolotesi \par}
+
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+\end{center}\par
+%\vspace*{0.5cm}\large
+
+\hspace{0.1cm}Laureando:\hspace{7.3cm}Relatori:\par
+
+\hspace{0.0cm}\emph{\laureando}\hfill\emph{Prof.~Osvaldo Gervasi}\par
+%\ \hfill\emph{Ing.~Riccardo Magni}\\
+
+\vfill
+
+\vspace{0.8cm}
+
+\begin{center}
+
+\rule{40mm}{0.01mm}\\
+
+Anno Accademico \annoaccademico
+
+\end{center}
+
+\end{titlepage}
+\newpage
+\vspace*{2.5cm}
+\begin{flushright}
+\begin{Large}\emph{\dedica}\end{Large}
+\end{flushright}
+\frenchspacing
+%%%%%% Ringraziamenti (opzionale)
+%
+%\chapter*{Ringraziamenti}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\listoffigures
+\pagenumbering{arabic}
+%%%% fine prologo
+%%%% Inizio corpo tesi
+%%%%%%%%%%%% INTRODUZIONE
+\chapter*{Introduzione}
+\pagestyle{fancy}
+\fancyhead[RO]{\bfseries Introduzione}
+\fancyfoot[RO]{\thepage \hfil}
+\addcontentsline{toc}{chapter}{Introduzione}
+\input{text/introduzione}
+%%%%%%%%%%%% CAPITOLI
+\input{text/capitolo1}
+\input{text/capitolo2}
+%%%%%%%%%%%% BIBLIOGRAFIA
+\chapter*{Conclusioni}
+\addcontentsline{toc}{chapter}{Conclusioni}
+\fancyhead[RO]{\bfseries Conclusioni}
+A conclusione del lavoro di Tesi, possiamo dire che gli obiettivi che ci si era preposti all'inizio delle attivit\`a sono stati in gran parte raggiunti. Infatti, \`e stato  realizzato un editor che consente la creazione di scene 3D adottando un approccio innovativo:  l'X3DOM.  Grazie a questa nuova tecnologia \`e stato possibile sviluppare un'applicazione web facile da installare, multipiattaforma e facile da utilizzare da parte anche dell'utente, anche meno esperto. 
+
+Nel secondo capitolo \`{e} stato mostrato come l'impiego dell'X3DOM ha portato notevoli vantaggi allo sviluppo dell'applicazione, semplificando molto l'interazione con la scena X3D, anche se l'adozione di questa tecnologia, recentemente introdotta, richiede una versione del browser usata dagi sviluppatori, in quanto la versione stabile del browser non supporta X3DOM. La scelta di utilizzare una tecnologia ancora in fase di sviluppo \`{e} stata comunque ampiamente ripagata dai vantaggi originati dalla sua adozione. 
+
+Nel terzo capitolo \`{e} stato poi mostrato come \`{e} possibile creare un esercizio funzionante utilizzando l'editor esposto nel secondo capitolo.
+%%%%%%%%%%%% BIBLIOGRAFIA
+\newpage
+\addcontentsline{toc}{chapter}{Bibliografia}
+\begin{thebibliography}{99}
+\input{text/bibliografia}     %conterra' una serie di istruzioni del tipo:    
+                         % \bibitem{eol} O. Gervasi and A. Lagan\`{a} "EOL: A Web-Based Distance Assessment System", 
+			 % Lecture Notes in Computer Science, 3044, Springer & Verlag, pp. 854-862 (2004)
+
+\end{thebibliography}
+%%%% APPENDICE CON IL CODICE SVILUPPATO
+\appendix
+\linespread{1}
+\chapter{Codice}
+\fancyhead[RO]{\bfseries Codice}
+\input{text/appendice}
+%%%%%%%%%%%%%%%%%%%
+%%%%% ESEMPIO:
+%\section{index.php}
+%\begin{footnotesize}
+\def\baselinestretch{0.7}
+%\begin{verbatim}
+% .... segue file con il codice  ...
+\def\baselinestretch{1}
+\end{document}
