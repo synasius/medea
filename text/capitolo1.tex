@@ -64,9 +64,6 @@ window.onload = function () {
     <h1>Canvas</h1>
     <canvas id="paint" width="400px" height="300px" style="border: 1px solid"> 
     </canvas>
-    <script type="text/javascript">
-    
-    </script>
 </body>
 </html>
 \end{mylisting}
@@ -84,9 +81,27 @@ Sebbene il Context ``2d'' sia il solo definito nella specifica, viene riportato 
 \clearpage
 
 \section{WebGL: il 3d (realmente) nel web}
-Le prime sperimentazioni di un context 3D per l'elemento canvas iniziano nel 2006 all'interno dei laboratori Mozilla ad opera di Vladimir Vukićević\footnote{Corso su WebGL. In \textit{HTML5Today}. Retrieved 12:10, August 14, 2011 from \url{http://www.html5today.it/tutorial/corso-webgl--introduzione}}. 
+Le prime sperimentazioni di un context 3D per l'elemento canvas iniziano nel 2006 all'interno dei laboratori Mozilla ad opera di Vladimir Vukićević\footnote{Corso su WebGL. In \textit{HTML5Today}. Retrieved 12:10, August 14, 2011 from \url{http://www.html5today.it/tutorial/corso-webgl--introduzione}}. Qualche anno più tardi, nel 2009, visto l'interesse suscitato fu istituito il WebGL Working Group. Ad oggi è uno standard cross-platform, cross-browser e royalty-free gestito dal consorzio Khronos Group, responsabile anche di altre importanti tecnologie in campo 3d quale, ad esempio, OpenGL. Nel Marzo 2011 è stata rilasciata la versione 1.0 della specifica\footnote{WebGL Specification. In \textit{Khronos Group}. Retrieved 9:20, July 29, 2011 from \url{https://www.khronos.org/registry/webgl/specs/1.0/}}.
+
+WebGL, acronimo di Web-based Graphics Library, è un'interfaccia di programmazione che consente di creare e gestire contenuti 3d all'interno della pagina web. Per mezzo del tag \texttt{<canvas>} espone una DOM API di basso livello, utilizzabile, dunque, attraverso qualsiasi linguaggio ``DOM-compatibile'' (vedi Javascript, Java). Queste caratteristiche consentono di mettere da parte i plugin di terze parti (spesso soluzioni proprietarie) e di accedere ad un 3d "nativo" del web. Un browser WebGL compatibile si occuperà di fornire l'accelerazione grafica sfruttando l'hardware presente sulla macchina, interfacciandosi direttamente con i driver, con risultati performanti di alta qualità.
+
+Non a caso infatti WebGL poggia su due tecnologie, consolidate e ampiamente diffuse, quali OpenGL ES2, API per la grafica 2D e 3D in sistemi embedded (console, telefono, veicoli, etc...), e l'OpenGL Shading Language (GLSL) per la creazione di ``Shader''\footnote{Gli shader sono insiemi di istruzioni, altamente flessibili e riutilizzabili, che definiscono in ogni parte l'aspetto finale che l'oggetto avrà dopo la fase di rendering.}. L'utilizzo di queste tecnolgie fa di WebGL un'interfaccia di basso livello e sebbene da una parte questo porti enormi benefici sul piano dell'efficienza e della qualità, dall'altra si introduce un'alto livello complessità, anche per la gestione di contenuti semplicissimi come quelli in Figura ~\ref{label:spinwebgl}: \textit{``WebGL is a low-level API, so it's not for the faint of heart. OpenGL's shading language, GLSL, is itself an entire programming environment. As a result, even simple things in WebGL take quite a bit of code. You have to load, compile, and link shaders, set up the variables to be passed in to the shaders, and also perform matrix math to animate shapes.''}. Il bagaglio di conoscenze richieste per utilizzare questa tecnologia è enorme come lo sono, di certo, lo sforzo e il tempo richiesti per apprenderle, malgrado questo sia poi il compito di uno sviluppatore.
+
+\begin{figure}[Ht]
+\centering
+\includegraphics[width=0.7\textwidth]{spinning_webgl.png}
+\caption{Cubo con texture in un canvas renderizzato con WebGL}
+\label{label:spinwebgl}
+\end{figure}
+
+In conclusione WebGL non è uno strumento ``ready-to-use'' e questo potrebbe non giocare a suo favore. Tuttavia, stanno già nascendo librerie di più alto livello che fungono da ``wrapper'' e agevolano la vita al programmatore\footnote{GLGE Official Website. In \textit{GLGE}. Retrieved 7:22, August 18, 2011 from http://www.glge.org/}, mascherando la complessa natura di WebGL e consentendogli dunque di concentrarsi pienamente sulla creazione di contenuti per web. Tra queste vi è sicuramente X3DOM, un framework che tenta di unire il vecchio X3D, consolidata tecnologia di ieri, senza dubbio ``user-friendly'', con il giovane e complicato WebGL.
+
 
 \section{X3DOM}
+Quanto visto finora con WebgGL consente di introdurre e gestire elementi di grafica 3d nel contesto web utilizzado un paradigma di programmazione imperativo. Ciò che manca è un modo semplice per integrare in maniera dichiarativa contenuti 3d all'interno del DOM di una pagina HTML. E' proprio quello che il framework X3DOM cerca di fare, recuperando un percorso già iniziato dall'X3D Working Group per una piena integrazione di X3D con HTML5. L'obiettivo finale è quello di incorporare una scena X3D all'interno del DOM, come già avvenuto per SVG, consentendone la manipolazione semplicemente interagendo con i nodi stessi e grazie al supporto degli eventi HTML per i nodi stessi.
+
+Oltre però ad integrare X3D e HTML5 e necessario poi renderizzare in qualche modo questi contenuti per renderli visibili all'utente finale. Il framework opensource X3DOM 
+
 X3DOM è un framework sperimentale ed open source il cui scopo è quello di cercare di integrare l'HTML5 con contenuti 3D dichiarativi. 
 La linea seguita durante lo sviluppo è quella di soddisfare le correnti specifiche dell'HTML5 riguardo i contenuti 3D dichiarativi\cite{W3C-d} e 
 permettere l'inclusione di elementi X3D come parte di un qualsiasi albero DOM HTML5. X3DOM è basato principalmente su due tecnologie: X3D e HTML5.
