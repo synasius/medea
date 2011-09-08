@@ -1,0 +1,572 @@
+\begin{mylisting}{python}{Medea: app.py}{lst:app.py}
+import web, os
+import config
+
+from view import render
+
+urls = (
+        '/', 'editor',
+)
+
+
+app = web.application(urls, globals())
+
+
+class editor(object):
+    def GET(self):
+        lib = parse_library(config.LIBRARY_PATH)
+        config.LOG.debug(lib)
+        return render.editor(lib)
+
+
+def parse_library(lib):
+    import fnmatch
+    # list in lib directory and prepend the path
+    files = map(lambda x: os.path.join(lib,x), os.listdir(lib)) 
+    config.LOG.debug(files)
+    
+    inlines = sorted(fnmatch.filter(files, "*.x3d"))
+    thumbs = sorted(fnmatch.filter(files, "*.png"))
+
+    return zip(inlines, thumbs)
+
+
+if __name__ == '__main__':
+    app.run()
+\end{mylisting}
+
+\begin{mylisting}{python}{Medea: config.py}{lst:config.py}
+import web, os
+import logging
+
+DEBUG = False
+
+# Setup logging
+def setup_logger():
+    """ Configure logger """
+    logger = logging.getLogger("medea")
+    formatter = logging.Formatter(
+                    "%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+
+    shandler = logging.StreamHandler()
+    shandler.setLevel(DEBUG and logging.DEBUG or logging.WARNING)
+    shandler.setFormatter(formatter)
+
+    fhandler = logging.FileHandler("medea.log")
+    fhandler.setLevel(DEBUG and logging.DEBUG or logging.WARNING)
+    fhandler.setFormatter(formatter)
+
+    logger.addHandler(shandler)
+    logger.addHandler(fhandler)
+    logger.setLevel(logging.DEBUG)
+
+    return logger
+
+LOG = setup_logger()
+
+
+BASE_PATH = os.path.dirname(os.path.abspath(__file__))
+TEMPLATES = os.path.join(BASE_PATH, 'templates/')
+
+STATIC_FILES = "static/"
+X3D_PATH = os.path.join(STATIC_FILES, 'x3d')
+LIBRARY_PATH = os.path.join(X3D_PATH, 'library')
+
+# Web.py caching
+cache = False
+\end{mylisting}
+
+\begin{mylisting}{python}{Medea: view.py}{lst:view.py}
+import web
+import config
+
+t_globals = dict(
+  datestr=web.datestr
+)
+
+render = web.template.render('templates/', 
+                             cache=config.cache, 
+                             globals=t_globals)
+
+def editor(**kw):
+    """ Renders editor """
+    return render.editor(**kw)
+\end{mylisting}
+
+\begin{mylisting}{html}{Medea: editor.html}{lst:editor.html}
+$def with (library=None)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Medea Scene Editor</title>
+        <meta http-equiv='Content-Type' content='text/html;charset=utf-8'></meta>
+        <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/x3dom/release/x3dom.css'></link>
+        <!--<link rel='stylesheet' type='text/css' href='/static/css/x3dom-v1.2.css'></link>-->
+        
+        <!--css-->
+        <link rel="stylesheet" type="text/css" href="/static/assets/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+        
+        <script type="text/javascript" src="/static/js/jquery-1.6.min.js"></script>
+        <script type="text/javascript" src="/static/js/raphael-min.js"></script>
+        <script type="text/javascript" src="/static/js/controller.js"></script>
+        <script type="text/javascript" src="/static/js/medea.js"></script>
+        <script type='text/javascript' src='http://www.x3dom.org/x3dom/release/x3dom.js'></script>
+        <!--<script type='text/javascript' src='/static/js/x3dom-v1.2.js'></script>-->
+        
+        <script type="text/javascript">
+        // Edit to suit your needs.
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: '/static/assets/css/',
+        
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+        
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+            '0px    to 760px  = mobile.min.css',
+            '760px  to 980px  = 720.min.css',
+            '980px  to 1280px = 960.min.css',
+            '1280px to 1600px = 1200.min.css',
+            '1600px to 1920px = 1560.min.css',
+            '1920px           = fluid.min.css'
+          ]
+        };
+        </script>
+        <script type="text/javascript" src="/static/assets/js/adapt.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="header-wrapper" class="container_12">
+                <div id="header-logo" class="grid_12">
+                    <a href="/">
+                        <img id="logo" src="/static/images/logo.png" alt="Medea Editor"/>
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+        <div id="content" class="container_12 clearfix">
+            <div id="drop" class="grid_9">
+                <x3d id='x3d_element' showStat='false' showLog='false' x='0px' y='0px' width='880px' height='400px'>
+                    <scene id="root_scene">
+                        <background skyColor='.7 .7 1'></background>
+                        <navigationinfo headlight="false" type="EXAMINE" avatarSize="0.25, 0.75, 0.20"></navigationinfo>
+                        <viewpoint DEF='FrontView' description='Front View' position='0 1 2'></viewpoint>
+                        
+                        <inline url="/static/x3d/market/minimarket_out.x3d"></inline>
+                    </scene>
+                </x3d> 
+            </div>
+            
+            <!-- Scene controls -->
+            <div id="side" class="grid_3">
+                <div id="controller">
+                    
+                </div>
+                
+                <div id="planes" class="controls">
+                    <h1>Movement Plane</h1>
+                    <button id="xy" type="button">XY</button>
+                    <button id="xz" type="button">XZ</button>
+                </div>
+                <div class="controls">
+                    <button id="remove_bt" type="button">Remove</button>
+                </div>
+                
+                <div id="nav_mode" class="controls">
+                    <h1>Navigation Mode</h1>
+                    <button id="examine" type="button">examine</button>
+                    <button id="walk" type="button">walk</button>
+                </div>
+                <div id="rotation" class="controls">
+                    <h1>Object Rotation</h1>
+                    <button id="rleft" type="button">left</button>
+                    <button id="rright" type="button">right</button>
+                </div>
+            </div>
+ 
+            <!-- Object Library -->
+            <div id="library" class="grid_12">
+                    $if library:
+                        <ul>
+                        $for x3d, thumb in library:        
+                            <li>
+                                <div class="grid_1 draggable">
+                                    <img src="$thumb" width="50px"></img>
+                                    <inline url="$x3d"></inline>
+                                </div>
+                            </li>
+                        </ul>
+                    $else: 
+                        <p><big>Your library is empty!</big><p>
+            </div>
+        </div>
+        
+        <footer>Copyright 2011 Synnz | Void Corp.</footer>
+    </body>
+</html>
+\end{mylisting}
+
+
+\begin{mylisting}{html}{Medea: style.css}{lst:style.css}
+body {
+    background-image: url("../images/body-bg.png");
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: white;
+}
+
+header {
+    background-image: url("../images/header-bg.png");
+    background-repeat: repeat-x;
+    height: 100px;
+}
+footer {
+    margin-top: 10px; 
+    text-align: center;
+    font-size: 80%;
+}
+
+#logo {
+    top: 15px;
+    position: absolute;
+}
+
+button {
+    background-color: #aabbcc;
+    border-style: none;
+}
+button:active, button.checked {
+    background-color: #445566;
+    color: white;
+}
+
+nav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+ul li {
+    margin-right: 10px;
+    display: inline;
+}
+nav ul li:hover {
+    cursor: default;
+    color: #445053;
+}
+
+#library {
+    background-color: #aabbcc;
+    margin-top: 10px;
+}
+
+#content {
+    margin-top: 10px;
+}
+
+.controls {
+    padding-top: 10px;
+}
+
+.draggable {
+    background-color: #eeeeee;
+    /*width: 100px;
+    height: 60px;*/
+    border: 3px #000000 dashed;
+    margin: 10px 10px;
+}
+\end{mylisting}
+
+
+\begin{mylisting}{Java}{Medea: medea.js}{lst:medea.js}
+$(function () {
+    // Loading controller
+    var controller = Raphael.controller(0, 0, 200, "controller");
+    
+    // object selection and movement
+    var medea = {};
+    medea.transform = '<transform class="selectable" translation="0 1 0"/>';
+    //TODO: put a slide in the UI to control this parameter
+    medea.range = 1; // This defines the sensibility of the controller 
+    medea.step = 0.785; // Rotation step
+    medea.plane = null;
+    medea.selected = null;
+    medea.select = function () {
+        var highlight = '<shape class="highlight"><sphere radius="0.2"/><appearance><material diffuseColor="1 0 0" transparency=".9"/></appearance></shape>';
+        
+        return function (ev) {
+            console.log(ev.target);
+            $(".highlight").remove();
+            
+            if (ev.target === medea.selected) {
+                medea.selected = null;
+            } else {
+                medea.selected = ev.target;
+                $(ev.target).append(highlight);
+            }
+        };
+    }();
+    medea.remove = function () {
+        if (!medea.selected) return;
+        
+        $(medea.selected).remove();
+        $(".highlight").remove();
+    }
+    
+    //TODO: maybe there is a better (and reliable) way to get the object translation
+    //      need to investigate x3dom
+    medea.getPos = function (coords) {
+        var pos = {x: 0, y: 0, z: 0};
+        if (coords) {
+            var str = coords.split(" ");
+            pos.x = parseFloat(str[0]);
+            pos.y = parseFloat(str[1]);
+            pos.z = parseFloat(str[2]);
+        }
+        
+        return pos;
+    }
+    medea.getRotation = function (coords) {
+        var rotation = {x: 0, y: 0, z: 0, g: 0};
+        if (coords) {
+            var str = coords.split(" ");
+            rotation.x = parseFloat(str[0]);
+            rotation.y = parseFloat(str[1]);
+            rotation.z = parseFloat(str[2]);
+            rotation.g = parseFloat(str[3]);
+        }
+        
+        return rotation;
+    }
+    medea.moving = function (vu, vv) {
+        if (!medea.selected) return;
+        
+        // Delta
+        var pos = medea.getPos($(medea.selected).attr('translation'));
+        
+        // TODO: i'd like to implement continuos movement while the cursor is grabbed aroud
+        //       varying movement speed based on vx and vy
+        
+        pos[medea.plane[0]] += vu*medea.range;
+        pos[medea.plane[1]] += vv*medea.range;            
+        $(medea.selected).attr('translation', pos.x +" "+ pos.y +" "+ pos.z);
+    }
+    medea.rotate = function (clockwise) {
+        if (!medea.selected) return;
+        
+        var r = medea.getRotation($(medea.selected).attr('rotation'));
+        r.y = 1;
+        
+        r.g += clockwise ? -medea.step : medea.step;
+        $(medea.selected).attr('rotation', r.x +" "+ r.y +" "+ r.z +" "+ r.g);
+    }
+
+    controller.bind(medea.moving);
+
+    
+    // On scene loading i need to bind all selectable transform to the select function 
+    $("#x3d_element transform.selectable").click(medea.select);
+    $("#remove_bt").click(medea.remove);
+    
+    
+    // Drag&drop handling
+    //Cambia il cursore sugli elementi trascinabili per renderli visibili
+    $(".draggable").css("cursor", "move");
+
+    $(".draggable")
+    //Indica al browser quali elementi sono trascinabili, in questo caso attraverso una classe.
+    .attr("draggable", "true")
+    //Specifica cosa fare quanto un elemento viene trascinato. In questo caso salvo il contenuto tramite
+    // innerHtml
+    .bind('dragstart', function(ev) {
+        var dt = ev.originalEvent.dataTransfer;
+        var html = $('<div>').append($(this).find("inline").clone()).remove().html();
+        dt.setData("node", html);
+        return true;
+    });
+    
+    //Indica al browser l'elemento in cui puoi trascinare gli oggetti.
+    $("#drop")
+    //Dragenter indica l'evento "entro nel target mentre sto trascinando qualcosa"
+    .bind("dragenter", function (ev) {
+        //$(this).css("background-color", "white");
+        return false;
+    })
+    //Dragleave indica l'evento "esco dal target mentre sto trascinando qualcosa"
+    .bind("dragleave", function (ev) {
+        //$(this).css("background-color", "#acd6ec");
+        return false;
+    })
+    //Dragover indica l'evento "sono sul target mentre sto trascinando qualcosa"
+    .bind('dragover', function(ev) {
+        //$(this).css("cursor", "copy");
+        return false;
+    })
+    //Dragover indica l'evento "deposito l'elemento che ho trascinato nel target".
+    .bind("drop", function (ev) {
+        //$(this).css("background-color", "#acd6ec");
+        //con questa riga ottengo i dati salvati quando ho iniziato a trascinare l'oggetto'
+        var tmp = ev.originalEvent.dataTransfer;
+        var node = $(medea.transform).append(tmp.getData("node"));
+        
+        $(this).find("scene").append(node);
+        
+        //console.log(window.x3dom.runtime.viewpoint());
+        //console.log($("#x3d_element").runtime.getActiveBindable('Viewpoint'));
+
+        // Binding click event to selection function
+        $(this).find("scene transform.selectable:last").click(medea.select);
+        return false;
+    });
+    
+    // Plane selector
+    var planeToggle = function (plane) {
+        medea.plane = plane.toLowerCase();
+        
+        console.log("Active plane: "+ medea.plane);
+    }
+    
+    // Handles the radio button for plane selection
+    $("#planes").click(function (ev){
+        if ($(ev.target).hasClass("checked")) return;
+        $("#planes > button").toggleClass("checked");
+        
+        planeToggle($(ev.target).html());
+    });
+    
+    // Navigation mode
+    $("#nav_mode").click(function (ev) {
+        if ($(ev.target).hasClass("checked")) return;
+        $("#nav_mode > button").toggleClass("checked");
+        
+        window.x3dom.runtime[$(ev.target).html()]();
+        
+        console.log("Nav mode: "+ $(ev.target).html())
+    });
+    
+    // Rotation controllers
+    $("#rleft").click(function (ev) {
+        medea.rotate(true);
+    });
+    $("#rright").click(function (ev) {
+        medea.rotate(false);
+    });
+    
+    // Initial setup 
+    // TODO: create a init() function
+    
+    // set xy as the active plane
+    $("#xy").toggleClass("checked");
+    planeToggle($("#xy").html());
+    
+    // set navigation mode to examine
+    $("#examine").toggleClass("checked");
+    //window.x3dom.runtime.examine();
+});
+\end{mylisting}
+
+\begin{mylisting}{Java}{Medea: controller.js}{lst:controller.js}
+(function (Raphael) {
+    Raphael.controller = function (x, y, size, element) {
+        return new Controller(x, y, size, element);
+    };
+    
+    var Controller = function (x, y, size, element) {
+        // *** start drawing controller
+        size = size || 200;
+        var size2 = size / 2,
+            size5 = size / 5,
+            size10 = size / 10;
+            padding = size * 0.02,
+            width = size * 0.02;
+        
+        var r = element ? Raphael(element, size, size) : Raphael(x, y, size, size);
+        
+        // Controller area
+        var rect = r.rect(-size2 + padding, -size2 + padding, size - padding, size - padding);
+        rect.attr({stroke: "#222", "stroke-width": width, fill: "#cfa"});
+        
+        var area = r.set();
+        area.push(rect,
+            rect.clone().translate(size - padding, 0).attr({fill: "#fea"}),
+            rect.clone().translate(0, size - padding).attr({fill: "#faa"}),
+            rect.clone().translate(size - padding, size - padding).attr({fill: "#acf"})
+        );
+        //area.rotate(45, size2, size2);
+        this.area = area;
+        
+        // Controller cursor
+        var cursor = r.circle(size2, size2, size10/2);
+        cursor.attr({stroke: "#222", "stroke-width": width, fill: "#fff"});
+        this.cursor = cursor;
+        // *** end drawing controller
+        
+        // Private callback on cursor drag
+        this._movecback = null;
+        this._startcback = null;
+        this._stopcback = null;
+        
+        // Events
+        // Cursor drag
+        var lbound = padding*2;
+        var rbound = size - lbound;
+        var t = this; 
+        this.cursor.drag(
+            function (dx, dy) {
+                this.attr({
+                    cx: Math.min(Math.max(this.ox + dx, lbound), rbound),
+                    cy: Math.min(Math.max(this.oy + dy, lbound), rbound)
+                })
+                
+                if (typeof t._movecback === 'function') {
+                    var vx = (dx / this.ox) - (this.odx / this.ox),
+                        vy = (-dy / this.oy) - (this.ody / this.oy);
+                     
+                    t._movecback(vx, vy);
+                    this.odx = dx, this.ody = -dy;
+                }
+            },
+            function () {
+                this.ox = this.attr("cx");
+                this.oy = this.attr("cy");
+                
+                this.odx = 0;
+                this.ody = 0;
+                
+                if (typeof t._startcback === 'function') t._startcback(); 
+                /*
+                // makes the cursor blinking
+                var that = this;
+                var glowing = function () {
+                    that.animate(
+                        {"50%": {opacity: .2},
+                         "100%": {opacity: 1, callback: glowing}}, 1000);
+                };
+                glowing();
+                */
+            },
+            function () {
+                this.stop();
+                this.attr({cx: this.ox, cy: this.oy, opacity: 1});
+                
+                if (typeof t._stopcback === 'function') t._stopcback();
+            }
+        );
+    };
+    
+    // Binding callback functions
+    Controller.prototype.bind = function (move, start, stop) {
+        if (typeof move === 'function') this._movecback = move;
+            
+        if (typeof start === 'function') this._startcback = start;
+           
+        if (typeof stop === 'function') this._stopcback = stop;
+    };
+})(window.Raphael);
+\end{mylisting}

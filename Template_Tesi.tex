@@ -3,7 +3,7 @@
 \def\titolotesi{Implementazione di un editor per mondi virtuali con tecnologia X3DOM} 
 \def\laureando{Federico Frenguelli}
 \def\annoaccademico{2010--2011}
-\def\dedica{}
+\def\dedica{A Chiara, alla mia famiglia, ai miei amici}
 %%%%%% File previsti in input:
 %% introduzione.tex    (deve contenere solo il testo, senza \chapter{})
 %% capitolo1.tex       (deve iniziare con \chapter{titolo capitolo})
@@ -26,7 +26,7 @@
 \usepackage{caption}
 \usepackage{url}
 \usepackage{setspace}
-
+\usepackage[gen]{eurosym}
 
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
@@ -37,10 +37,9 @@
    basicstyle=\small\sffamily,
    columns=fullflexible,
    commentstyle=\color{gray}\textit,
-   numberstyle=\tiny,
+   numberstyle=\small,
    breaklines=true,
    frame=b,
-   numberstyle=\tiny,
    numbersep=5pt,
    framextopmargin=10pt,
    morecomment=[l]{//},
@@ -155,11 +154,11 @@ Anno Accademico \annoaccademico
 \chapter*{Conclusioni}
 \addcontentsline{toc}{chapter}{Conclusioni}
 \fancyhead[RO]{\bfseries Conclusioni}
-A conclusione del lavoro di Tesi, possiamo dire che gli obiettivi che ci si era preposti all'inizio delle attivit\`a sono stati in gran parte raggiunti. Infatti, \`e stato  realizzato un editor che consente la creazione di scene 3D adottando un approccio innovativo:  l'X3DOM.  Grazie a questa nuova tecnologia \`e stato possibile sviluppare un'applicazione web facile da installare, multipiattaforma e facile da utilizzare da parte anche dell'utente, anche meno esperto. 
+Durante la progettazione e lo sviluppo del software Medea, ho avuto modo approfondire quelle che sono le ultimi novità del mondo web. Tecnologie giovanissime come HTML5, WebGL e X3DOM che malgrado la tenera età già riescono a dimostrare l'enorme potenziale che hanno. Nelle varie fasi di sviluppo, la tenera età a volte pesa e i limiti intrinseci vengono a galla. Inefficienza, API poco accessibili, documentazione di sviluppo inaccessibile. A compensare però c'è una community disponibile e molto attiva. In pochi mesi una libreria come x3dom.js ha implementato numerose features e risolto innumerevoli bug, senza contare i miglioramenti apportati alla documentazione. Certo, se si pensa all'entusiasmo che c'era agli albori di X3D e a come fu, lentamente, quasi dimenticato, si potrebbe pensare che la storia stia per ripetersi.
 
-Nel secondo capitolo \`{e} stato mostrato come l'impiego dell'X3DOM ha portato notevoli vantaggi allo sviluppo dell'applicazione, semplificando molto l'interazione con la scena X3D, anche se l'adozione di questa tecnologia, recentemente introdotta, richiede una versione del browser usata dagi sviluppatori, in quanto la versione stabile del browser non supporta X3DOM. La scelta di utilizzare una tecnologia ancora in fase di sviluppo \`{e} stata comunque ampiamente ripagata dai vantaggi originati dalla sua adozione. 
+Quello che invece è emerso grazie a questo progetto è che le tecnologie di cui parliamo, questa stavolta ce la possono fare davvero. Gli scogli che hanno impedito l'affermazione del ``vecchio'' web3d sono stati superati. L'eliminazione dei plugin avvicina l'utente e i contenuti 3d alla distanza di un semplice click. Anche il contesto è cambiato. L'hardware che fornisce accelerazione grafica è sicuramente più diffuso di tempo, si potrebbe anzi affermare che è oramai essenziale. 
 
-Nel terzo capitolo \`{e} stato poi mostrato come \`{e} possibile creare un esercizio funzionante utilizzando l'editor esposto nel secondo capitolo.
+C'è sicuramente ancora del lavoro da fare. La community di X3DOM sta già lavorando per rendere il motore più efficiente e l'API più completa. Il W3C ha da poco aperto un gruppo di discussione per il 3D dichiarativo, segno che il messaggio è stato recepito. In conclusione, la strada è spianata. Il web sta per acquistare definitivamente una terza dimensione.
 %%%%%%%%%%%% BIBLIOGRAFIA
 \newpage
 \addcontentsline{toc}{chapter}{Bibliografia}
