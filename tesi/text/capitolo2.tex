@@ -1,7 +1,7 @@
 \chapter{L'editor Medea}                 
 \fancyhead[RO]{\bfseries L'editor Medea} 
 
-In questa seconda parte si analizzerà il software Medea realizzato per il progetto. Dapprima verranno illustrati i requisiti funzionali e poi si scendera nel dettaglio, per approfondire la caratteristiche tecniche dell'implementazione data. Alla base ci sono come colonne portanti le tecnologie già ampiamente descritte nella prima parte di questo lavoro. Il compito di questo software è mostrarne le potenzialità e valutarne efficienza e maturità.
+In questa seconda parte si analizzerà il software Medea realizzato per il progetto. Dapprima verranno illustrati i requisiti funzionali e poi si scenderà nel dettaglio per approfondire la caratteristiche tecniche dell'implementazione data. Alla base ci sono come colonne portanti le tecnologie già ampiamente descritte nella prima parte di questo lavoro. Il compito di questo software è mostrarne potenzialità e limiti.
 
 
 \section{Prerequisiti}
@@ -10,7 +10,7 @@ Per poter utilizzare il software Medea è necessario un browser di ultima genera
 
 
 \section{Strumenti di sviluppo}
-L'ambiente di sviluppo è costituito da una macchina su cui gira il sistema operativo GNU/Linux Ubuntu 11.04. La macchina monta una scheda grafica Intel GMA 4500MHD, un hardware che non brilla certo per prestazione. Proprio per questo è servito anche ad evidenzire quelli che sono i limiti a livello di fruibilità dell'applicazione.
+L'ambiente di sviluppo è costituito da una macchina su cui gira il sistema operativo GNU/Linux Ubuntu 11.04. La macchina monta una scheda grafica Intel GMA 4500MHD, un hardware che non brilla certo per le sue prestazioni. Proprio per questo è servito anche ad evidenziare quelli che sono i limiti a livello di fruibilità dell'applicazione.
 
 \subsection{Aptana Studio IDE}
 Aptana Studio è un Integrated Development Environment opensource improntato allo svillupo di web applications Ajax. Integra già ora il supporto a tecnologie base quali HTML5 e CSS3, DOM e Javascript. Inoltre fornisce gli strumenti per utilizzare importanti framework per applicazioni web quali Ruby on Rails, PHP, Python e Perl. Basato su un solido progetto quale Eclipse, è gratuito e multipiattaforma, ed offre funzionalita di code-completion, code-assist, debugging avanzato e molte altre. 
@@ -23,13 +23,13 @@ Aptana Studio è un Integrated Development Environment opensource improntato all
 \end{figure}
 
 \subsection{Blender per il modeling 3D}
-Lo scoglio più grande da superare quando si parla di modellazione 3d è sicuramente quello di trovare un valido tool di supporto a questo difficile compito, in modo particolare se si ha a che con oggetti e scene complesse. In questi casi occorre uno strumento che consenta visivamente di modellare le mesh fin nei minimi dettagli. Vi sono molti software proprietari che potrebbero risolvere il problema, ma il prezzo è spesso proibitorio e non sono multipiattaforma. Viene in nostro soccorso Blender, un software gratuito, opensource  e multipiattaforma per la gafica 3D. 
+Lo scoglio più grande da superare quando si parla di modellazione 3d è sicuramente quello di trovare un valido tool di supporto a questo difficile compito, in modo particolare se si ha a che fare con oggetti e scene complesse. In questi casi occorre uno strumento che consenta visivamente di modellare le mesh fin nei minimi dettagli. Vi sono molti software proprietari che potrebbero risolvere il problema, ma il prezzo è spesso proibitorio e non sono multipiattaforma. Viene in nostro soccorso Blender, un software per la grafica 3D gratuito, opensource e che supporta a molteplici sistemi operativi.
 
 Nato dalla mente di Ton Roosendal nel 1995 all'interno dello studio di animazione NeoGeo, nel 1998 viene rilasciato come prodotto freeware allo scopo di stimolare interesse da parte degli utenti e quindi offrire servizi di supporto a pagamento. Malgrado l'interesse suscitato e l'enorme community che si era creata intorno, NaN (Not a Number), la società che distribuiva Blender, va in bancarotta nel 2002. Roosendaal però non voleva abbandonare Blender al proprio destino e fonda la “Blender Foundation” con lo scopo di  portarne avanti lo sviluppo. Nel Luglio 2002 parte la campagna “Free Blender”, il cui intento é raccogliere i fondi (100.000\euro) per riacquistare i diritti su Blender e rilasciarlo poi come open source. C'è un'enorme risposta da parte della community e il 13 Ottobre 2002, circa due mesi dopo, l'obiettivo é raggiunto. Blender viene rilasciato con licenza GPL.
 
-Oggi Blender è giunto alla versione 2.59 e già si prepara il terreno per la 2.60. \'{E} un'applicazione completa per la creazione di contenuti 2D e 3D. Contiene tutti gli strumenti di base per il modeling, rendering, lighting, texturing e animazione, oltre a funzionalità avanzate quali un game engine, physic simulation engine e strumenti per la post-produzione. \'{E} estensibile e programmabile grazie ad un motore di scripting Python che assicura la massima flessibilità.
+Oggi Blender è giunto alla versione 2.59 e già si prepara il terreno per la 2.60. \'{E} un'applicazione completa per la creazione di contenuti 2D e 3D. Contiene tutti gli strumenti di base per il modeling, rendering, lighting, texturing e animazione, oltre a funzionalità avanzate quali un game engine, physic simulation engine e strumenti per la post-produzione. \'{E} estensibile e programmabile grazie ad un motore di scripting Python che ne assicura la massima flessibilità.
 
-Integra inoltre un comodo exporter verso numerosi formati, tra cui anche X3D. Questa e le caratteristiche prima citate lo hanno reso strumento indispensabile per la realizzazione di questo progetto.
+Blender integra inoltre un comodo exporter verso numerosi formati, tra cui anche X3D. Questa e le caratteristiche prima citate lo hanno reso strumento indispensabile per la realizzazione di questo progetto.
 
 \begin{figure}[Ht]
 \centering
@@ -41,9 +41,9 @@ Integra inoltre un comodo exporter verso numerosi formati, tra cui anche X3D. Qu
 \subsection{SVG con Raphael JavaScript Library}
 Merita di essere citata tra gli strumenti utilizzati anche RaphaelJS. Questa piccola libreria da la possibilità allo sviluppatore di creare attraverso codice Javascript elementi di grafica vettoriale all'interno della pagina web. Alla base c'è lo standard SVG, il markup language per la descrizione di contenuti 2D dichiarativi. Raphael espone dei metodi per il disegno che altro non fanno che creare all'interno del DOM il rispettivo scene-graph SVG (vedi il listato ~\ref{lst:raphael}. Ogni oggetto creato nel DOM è connesso ad un oggetto Javascript e può essere manipolato con facilità, sia grazie agli eventi HTML che da Javascript stesso.
 
-L'obiettivo finale di Raphael, come dice ill suo autore Dmitry Baranovskiy, è quello di fornire un libreria per il disegno vettoriale che possa garantire compatibilità cross-browser e al tempo stesso facilità d'uso.
+L'obiettivo finale di Raphael, come dice il suo autore Dmitry Baranovskiy, è quello di fornire un libreria per il disegno vettoriale che possa garantire compatibilità cross-browser e al tempo stesso facilità d'uso.
 
-In questo progetto, Raphael è stato utilizzato per dar vita ad un controller interattivo che consentisse all'utente di spostare un oggetto all'interno della scena 3d e che fosse allo stesso tempo semplice ed intuitivo. L'intento era anche quello di ``pensionare'' una volta per tutte i tanto abusati slider.
+In questo progetto Raphael è stato utilizzato per dar vita ad un controller interattivo che consentisse all'utente di spostare un oggetto all'interno della scena 3d e che fosse allo stesso tempo semplice ed intuitivo. L'intento era anche quello di ``pensionare'' una volta per tutte i tanto abusati slider.
 
 \begin{mylisting}{html}{Esempio di utilizzo della libreria RaphaelJS}{lst:raphael}
 // Crea una tela su cui disegnare 400x300 at 10, 10
@@ -55,7 +55,7 @@ rect.attr("fill", "#f00"); // Lo riempe con il colore rosso
 \end{mylisting}
 
 \section{Caso d'uso}
-L'idea alla base di questo progetto è quella di fornire all'utente un'ambiente che gli consenta di navigare un mondo virtuale, con la possibilità di collocarvi degli oggetti a piacere. Le scene a disposizione e gli oggetti faranno parte di una libreria che verrà creata in base alle specifiche esigenze. L'obiettivo del progetto è difatti quello di sviluppare la struttura che consenta di contenere le scene e di inserire e muovere gli oggetti, e non quello di disegnare gli oggetti stessi. Va da se che un caso concreto è stato comunque creato. Come ambiente di prova è stato modellato un minimarket e alcuni dei relativi prodotti. Nelle figure ~\ref{label:marketbrout} e ~\ref{label:marketbrin} si possono vedere due rendering dell'ambiente creato, effettuati con blender.
+L'idea alla base di questo progetto è quella di fornire all'utente un'ambiente che gli consenta di navigare in un mondo virtuale, con la possibilità di collocarvi degli oggetti a piacere. Le scene a disposizione e gli oggetti faranno parte di una libreria che verrà creata in base alle specifiche esigenze. L'obiettivo del progetto è difatti quello di sviluppare la struttura che consenta di contenere le scene e di inserire e muovere gli oggetti, e non quello di disegnare gli oggetti stessi. Va da se che un caso concreto è stato comunque creato. Come ambiente di prova è stato modellato un minimarket e alcuni dei relativi prodotti. Nelle figure ~\ref{label:marketbrout} e ~\ref{label:marketbrin} si possono vedere due rendering dell'ambiente creato, effettuati con blender.
 
 \begin{figure}[Ht]
 \centering
@@ -75,16 +75,17 @@ L'interfaccia, come già anticipato, sarà il browser e tutti i contenuti dovran
 
 Quest'interfaccia mira ad essere semplice ed immediata per l'utente, operando alcune scelte fondamentali:
 \begin{itemize}
-    \item Utilizzo del Drag 'n Drop HTML5 per l'inserimento degli oggetti di libreria nella scena
-    \item Controller SVG semplificato ed intuitivo in sostituzione dei classici slider
+    \item Utilizzo del Drag 'n Drop HTML5 per l'inserimento degli oggetti di libreria nella scena;
+    \item Controller SVG semplificato ed intuitivo in sostituzione dei classici slider;
 \end{itemize}
 
 \begin{figure}[Ht]
 \centering
-\includegraphics[width=0.9\textwidth]{mockupui.png}
+\includegraphics[width=0.8\textwidth]{mockupui.png}
 \caption{Medea User Interface}
 \label{label:mockupui}
 \end{figure}
+%\clearpage
 
 \section{Le caratteristiche tecniche}
 
@@ -118,12 +119,9 @@ Alla base del software Medea c'è Webpy, un framework Python per creare web-appl
 \begin{mylisting}{python}{Medea server}{lst:medeaserver}
 import web, os
 import config
-
 from view import render
 
-urls = (
-        '/', 'editor',
-)
+urls = ('/', 'editor',)
 
 application = web.application(urls, globals())
 
@@ -142,7 +140,7 @@ def parse_library(path):
     return zip(inlines, thumbs)
 \end{mylisting}
 
-Il modulo python \texttt{web} è il cuore del framework e ci consente di creare l'oggetto \texttt{application} che si occuperà di servire le richieste, secondo il mapping definito a linea 6. In questo caso la mappatura è elementare: sono consentite solo richieste indirizzate alla 'root' e queste vengono servite da un istanza della classe \texttt{editor}, la quale definisce un comportamento per il solo metodo HTTP GET.
+Il modulo python \texttt{web} è il cuore del framework e ci consente di creare l'oggetto \texttt{application} che si occuperà di servire le richieste, secondo il mapping definito a linea 6. In questo caso la mappatura è elementare: sono consentite solo richieste indirizzate alla 'root' e queste vengono servite da un'istanza della classe \texttt{editor}, la quale definisce un comportamento per il solo metodo HTTP GET.
 
 Questo metodo carica tutti i file di libreria, collocata in un path specificato nel modulo di configurazione, chiamando la funzione \texttt{parse-library}. Dopodich\'{e} renderizza il template \texttt{editor.html} passandogli come parametro la lista ottenuta e restituisce il risultato al client. Il listato ~\ref{lst:library} mostra un estratto del template, in particolare la parte in cui viene creata la libreria. Il motore di templating utilizza il carattere '\$' come escape per includere codice python all'interno della pagina html. Quando il template viene processato il codice incluso viene riconosciuto ed eseguito per generare la pagina dinamicamente. \'{E} possibile passare al template dei parametri in input. In questo caso viene fornita la lista degli oggetti in libreria. Ogni oggetto contiene l'url del file x3d e dell'immagine. Il ciclo \texttt{\$for x3d, thumb in library} produce un elemento \texttt{<li>} con questi dati.
 
