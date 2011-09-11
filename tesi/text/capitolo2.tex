@@ -198,9 +198,9 @@ $("#x3d_element transform.selectable").click(medea.select);
 $("#remove_bt").click(medea.remove);
 \end{mylisting}
 
-\texttt{medea.js} è eseguito alla fine del caricamento della pagina. Il primo ad essere creato è il controller, del quale saranno dati i dettagli implementativi più avanti. Il metodo \texttt{Raphael.controller} prende in input la posizione (coordinate x, y), la dimensione e l'id dell'elemento HTML che nel quale disegnare il controller. Vengono poi inizializzati alcuni parametri che specificano la sensibilità del controller durante il movimento, il piano su cui l'oggetto si muove e lo step di rotazione degli oggetti in radianti. La rotazione è stata vincolata sul solo asse y a step di 45 gradi per facilitare l'utente nel posizionamento. Segue la funzione \texttt{medea.select} che gestisce il click sull'oggetto della scena 3d marcandolo come selezionato, sia internamente, valorizzando la variabile di stato \texttt{medea.selected} con il rispettivo oggetto javascript, sia visivamente per l'utente, aggiungendo una sfera semitrasparente intorno all'oggetto. Nelle ultime due istruzioni le funzioni sopra descritte vengno connesse agli eventi degli elementi che li gestiscono. Da notare che per la selezione la funzione \texttt{medea.select} viene agganciata ai soli nodi transform che abbiano classe \texttt{selectable}, così da impedire all'utente di spostare qualsiasi mesh presente nell'ambiente.
+\texttt{medea.js} è eseguito alla fine del caricamento della pagina. Il primo ad essere creato è il controller, del quale saranno dati i dettagli implementativi più avanti. Il metodo \texttt{Raphael.controller} prende in input la posizione (coordinate x, y), la dimensione e l'id dell'elemento HTML nel quale disegnare il controller. Vengono poi inizializzati alcuni parametri che specificano la sensibilità del controller durante il movimento, il piano su cui l'oggetto si muove e lo step di rotazione degli oggetti in radianti. La rotazione è stata vincolata sul solo asse y a step di 45 gradi per facilitare l'utente nel posizionamento. Segue la funzione \texttt{medea.select} che gestisce il click sull'oggetto della scena 3d marcandolo come selezionato, sia internamente, valorizzando la variabile di stato \texttt{medea.selected} con il rispettivo oggetto javascript, sia visivamente per l'utente, aggiungendo una sfera semitrasparente intorno all'oggetto. Nelle ultime due istruzioni le funzioni sopra descritte vengno connesse agli eventi degli elementi che li gestiscono. Da notare che per la selezione la funzione \texttt{medea.select} viene agganciata ai soli nodi transform che abbiano classe \texttt{selectable}, così da impedire all'utente di spostare qualsiasi mesh presente nell'ambiente.
 
-L'inserimento viene gestito grazie al Drag'n Drop che HTML5 implementa nativamente. Nella pratica, ogni elemento che abbia l'attributo \texttt{draggable=true} è trascinabile. Di seguito il codice che gestisce questa funzionalità.
+L'inserimento viene gestito grazie al Drag'n Drop che HTML5 implementa nativamente. Nella pratica, ogni elemento che abbia l'attributo \texttt{draggable} impostato a \texttt{true} è trascinabile. Di seguito il codice che gestisce questa funzionalità.
 
 \begin{mylisting}{Java}{Medea client: il Drag'n Drop}{lst:medeajs2}
 //Indica al browser quali elementi sono trascinabili, in questo caso attraverso una classe.
@@ -235,7 +235,7 @@ $("#drop").bind("dragenter", function (ev) {
 
 Il codice può sembrare di difficile comprensione; in realtà la parte interessante è nelle due funzioni che gestiscono gli eventi ``dragstart'' e ``drop''. La prima specifica le azioni da intraprendere quando inizia un'azione di trascinamento. In questo caso viene memorizzato il contenuto html dell'elemento trascinato nell'oggetto \texttt{dataTransfer}\footnote{L'oggetto dataTransfer può essere visto come un'area di comunicazione condivisa disponibile solo se si verifica uno degli eventi legati al drag'n drop} con la chiave "node". Nel contenuto html dell'elemento ``draggable'' è stato preventivamente predisposto dal server il tag \texttt{<inline>} che fa riferimento all'oggetto. La funzione legata al ``drop'' a questo punto non fa altro che recuperare il contenuto del \texttt{dataTransfer} con la stessa chiave, lo inserisce in un un nodo \texttt{<transform>} selezionabile e lo incorpora nella scena X3D.
 
-Ultime funzioni degne di nota sono \texttt{medea.rotate} e \texttt{medea.moving} nel listato ~\ref{lst:medeajs3}. La prima manipola l'attributo \texttt{rotation} del nodo selezionato e viene banalmente agganciata al click dei pulsanti con id ``rleft'' e ``rright''. La seconda, più interessante, calcola la posizione dell'elemento selezionato sulla base dei due parametri in input \texttt{vu} e \texttt{vv}. La funzione si aspetta che questi valori siano compresi tra 0 e 1 per essere poi moltiplicati per la variabile \texttt{medea.range}, che ne definisce dunque la sensibilità. \texttt{medea.moving} viene passata come funzione di ``callback'' al controller, il quale ad ogni variazione, la richiamerà impostando opportunamente i due valori richiesti in input.
+Ultime funzioni degne di nota sono \texttt{medea.rotate} e \texttt{medea.moving} nel listato ~\ref{lst:medeajs3}. La prima manipola l'attributo \texttt{rotation} del nodo selezionato e viene banalmente agganciata al click dei pulsanti con id ``rleft'' e ``rright''. La seconda, più interessante, calcola la posizione dell'elemento selezionato sulla base dei due parametri in input \texttt{vu} e \texttt{vv}. La funzione si aspetta che questi valori siano compresi tra 0 e 1 per essere poi moltiplicati per la variabile \texttt{medea.range}, che ne definisce dunque la sensibilità. \texttt{medea.moving} viene passata come funzione di ``callback'' al controller, il quale, ad ogni variazione, la richiamerà impostando opportunamente i due valori richiesti in input.
 
 \begin{mylisting}{Java}{Medea client: movimento e rotazione}{lst:medeajs3}
 medea.rotate = function (clockwise) {
@@ -269,7 +269,7 @@ controller.bind(medea.moving);
 \subsection{Il controller}
 Il componente \texttt{controller.js} ha il compito di disegnare il controller SVG per il movimento degli oggetti. Grazie alla libreria RaphaelJS, questo compito può essere svolto interamente dal codice javascript.
 
-Quello che si è cercato di fare, è creare un elemento che estende le funzionalità della libreria Raphael con un nuovo componente, istanziabile grazie al metodo \texttt{Raphael.controller}. L'oggetto Controller è stato reso indipendente dal progetto Medea ed è quindi sganciabile e riutilizzabile.
+Quello che si è cercato di fare è creare un elemento che estende le funzionalità della libreria Raphael con un nuovo componente, istanziabile grazie al metodo \texttt{Raphael.controller}. L'oggetto Controller è stato reso indipendente dal progetto Medea ed è quindi sganciabile e riutilizzabile.
 
 \begin{mylisting}{Java}{Medea client: il controller SVG}{lst:controllerjs1}
 (function (Raphael) {
@@ -341,7 +341,7 @@ Quello che si è cercato di fare, è creare un elemento che estende le funzional
 Il listato ~\ref{lst:controllerjs1} mostra la crezione dell'area di controllo, tralasciando la parte di disegno, specifica della libreria Raphael. Vengono invece riportate i metodi che gestiscono il trascinamento del cursore per mostrare come sono state agganciate le callback. Oltre alla funzione \texttt{movecback} è stata prevista la possibilità di fornire, sempre tramite il metodo \texttt{Controller.bind}, due funzioni per gli eventi di ``dragstart'' e ``dragstop''.
 
 \subsection{L'interfaccia finale}
-Non resta altro che mettere insieme i pezzi del puzzle. Con poche righe di codice, si carica il motore x3dom.js, responsabile dell'integrazione e del rendering della scena x3d. Al caricamento della pagina, x3dom verifica la presenza di un tag \texttt{<x3d>} nel DOM della pagina e, qualora fosse presenta, aggiunge un elemento \texttt{canvas} per la visualizzazione della scena tramite WebGL. Nel listato ~\ref{lst:editorx3d} la scena x3d è inclusa direttamente nella pagina. Ciò non toglie che sarebbe auspicabile una funzione lato server che la carichi dinamicamente all'interno di un \texttt{<div>} predefinito, similmente a quanto fatto per la gestione della libreria.
+Non resta altro che mettere insieme i pezzi del puzzle. Con poche righe di codice, si carica il motore x3dom.js, responsabile dell'integrazione e del rendering della scena X3D. Al caricamento della pagina, X3DOM verifica la presenza di un tag \texttt{<x3d>} nel DOM della pagina e, qualora fosse presente, aggiunge un elemento \texttt{canvas} per la visualizzazione della scena tramite WebGL. Nel listato ~\ref{lst:editorx3d} la scena x3d è inclusa direttamente nella pagina. Ciò non toglie che sarebbe auspicabile una funzione lato server che la carichi dinamicamente all'interno di un \texttt{<div>} predefinito, similmente a quanto fatto per la gestione della libreria.
 
 \begin{mylisting}{html}{Medea: editor.html}{lst:editorx3d}
 <!DOCTYPE html>
@@ -370,7 +370,8 @@ Non resta altro che mettere insieme i pezzi del puzzle. Con poche righe di codic
         </div>
 \end{mylisting}
 
-La Figura ~\ref{label:medeaui01} mostra l'interfaccia utente finale del software Medea, mentre in Figura ~\ref{label:medeaui02} è immortalato un utente in fase di posizionamento dell'oggetto selezionato. 
+La Figura ~\ref{label:medeaui01} mostra l'interfaccia utente finale del software Medea, mentre in Figura ~\ref{label:medeaui02} è immortalato un utente in fase di posizionamento dell'oggetto selezionato.
+\clearpage
 
 \begin{figure}[Ht]
 \centering
