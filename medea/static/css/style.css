@@ -1,0 +1,66 @@
+body {
+    background-image: url("../images/body-bg.png");
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: white;
+}
+
+header {
+    background-image: url("../images/header-bg.png");
+    background-repeat: repeat-x;
+    height: 100px;
+}
+footer {
+    margin-top: 10px; 
+    text-align: center;
+    font-size: 80%;
+}
+
+#logo {
+    top: 15px;
+    position: absolute;
+}
+
+button {
+    background-color: #aabbcc;
+    border-style: none;
+}
+button:active, button.checked {
+    background-color: #445566;
+    color: white;
+}
+
+nav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+ul li {
+    margin-right: 10px;
+    display: inline;
+}
+nav ul li:hover {
+    cursor: default;
+    color: #445053;
+}
+
+#library {
+    background-color: #aabbcc;
+    margin-top: 10px;
+}
+
+#content {
+    margin-top: 10px;
+}
+
+.controls {
+    padding-top: 10px;
+}
+
+.draggable {
+    background-color: #eeeeee;
+    /*width: 100px;
+    height: 60px;*/
+    border: 3px #000000 dashed;
+    margin: 10px 10px;
+}

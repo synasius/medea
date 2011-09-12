@@ -1,0 +1,117 @@
+$def with (library=None)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Medea Scene Editor</title>
+        <meta http-equiv='Content-Type' content='text/html;charset=utf-8'></meta>
+        <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/x3dom/release/x3dom.css'></link>
+        <!--<link rel='stylesheet' type='text/css' href='/static/css/x3dom-v1.2.css'></link>-->
+        
+        <!--css-->
+        <link rel="stylesheet" type="text/css" href="/static/assets/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+        
+        <script type="text/javascript" src="/static/js/jquery-1.6.min.js"></script>
+        <script type="text/javascript" src="/static/js/raphael-min.js"></script>
+        <script type="text/javascript" src="/static/js/controller.js"></script>
+        <script type="text/javascript" src="/static/js/medea.js"></script>
+        <script type='text/javascript' src='http://www.x3dom.org/x3dom/release/x3dom.js'></script>
+        <!--<script type='text/javascript' src='/static/js/x3dom-v1.2.js'></script>-->
+        
+        <script type="text/javascript">
+        // Edit to suit your needs.
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: '/static/assets/css/',
+        
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+        
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+            '0px    to 760px  = mobile.min.css',
+            '760px  to 980px  = 720.min.css',
+            '980px  to 1280px = 960.min.css',
+            '1280px to 1600px = 1200.min.css',
+            '1600px to 1920px = 1560.min.css',
+            '1920px           = fluid.min.css'
+          ]
+        };
+        </script>
+        <script type="text/javascript" src="/static/assets/js/adapt.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="header-wrapper" class="container_12">
+                <div id="header-logo" class="grid_12">
+                    <a href="/">
+                        <img id="logo" src="/static/images/logo.png" alt="Medea Editor"/>
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+        <div id="content" class="container_12 clearfix">
+            <div id="drop" class="grid_9">
+                <x3d id='x3d_element' showStat='false' showLog='false' x='0px' y='0px' width='880px' height='400px'>
+                    <scene id="root_scene">
+                        <background skyColor='.7 .7 1'></background>
+                        <navigationinfo headlight="false" type="EXAMINE" avatarSize="0.25, 0.75, 0.20"></navigationinfo>
+                        <viewpoint DEF='FrontView' description='Front View' position='0 1 2'></viewpoint>
+                        
+                        <inline url="/static/x3d/market/minimarket_out.x3d"></inline>
+                    </scene>
+                </x3d> 
+            </div>
+            
+            <!-- Scene controls -->
+            <div id="side" class="grid_3">
+                <div id="controller">
+                    
+                </div>
+                
+                <div id="planes" class="controls">
+                    <h1>Movement Plane</h1>
+                    <button id="xy" type="button">XY</button>
+                    <button id="xz" type="button">XZ</button>
+                </div>
+                <div class="controls">
+                    <button id="remove_bt" type="button">Remove</button>
+                </div>
+                
+                <div id="nav_mode" class="controls">
+                    <h1>Navigation Mode</h1>
+                    <button id="examine" type="button">examine</button>
+                    <button id="walk" type="button">walk</button>
+                </div>
+                <div id="rotation" class="controls">
+                    <h1>Object Rotation</h1>
+                    <button id="rleft" type="button">left</button>
+                    <button id="rright" type="button">right</button>
+                </div>
+            </div>
+ 
+            <!-- Object Library -->
+            <div id="library" class="grid_12">
+                    $if library:
+                        <ul>
+                        $for x3d, thumb in library:        
+                            <li>
+                                <div class="grid_1 draggable">
+                                    <img src="$thumb" width="50px"></img>
+                                    <inline url="$x3d"></inline>
+                                </div>
+                            </li>
+                        </ul>
+                    $else: 
+                        <p><big>Your library is empty!</big><p>
+            </div>
+        </div>
+        
+        <footer>Copyright 2011 Synnz | Void Corp.</footer>
+    </body>
+</html>

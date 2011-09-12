@@ -1,0 +1,9 @@
+<x3d id='x3d_element' showStat='false' showLog='false' x='0px' y='0px' width='880px' height='400px'>
+    <scene id="root_scene">
+        <background skyColor='0 0 0'></background>
+        <navigationinfo headlight="false" type="EXAMINE" avatarSize="0.25, 0.75, 0.75"></navigationinfo>
+        <viewpoint DEF='FrontView' description='Front View' position='0.01 0.80 2.80'></viewpoint>
+        
+        <inline url="x3d/market/minimarket_out.x3d"></inline>
+    </scene>
+</x3d>
