@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="pate.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="454.65862"
+     inkscape:cy="516.58677"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2997"
+       transform="matrix(1.6008082,0,0,1.6008082,-129.83603,-165.58618)"
+       inkscape:export-filename="/home/syn/workspace/medea/resources/textures/pate_r.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 148.51872,275.80749 c 10.33708,-4.01391 21.97998,-6.04778 33.18657,-8.51625 15.25505,-2.49064 30.6606,-4.55207 46.08357,-6.45643 22.30755,-3.23689 45.01969,-3.97582 67.71242,-4.47629 38.20014,-0.065 76.45347,-1.20203 114.64285,-0.57259 27.62945,0.6396 54.48312,5.64334 80.29708,12.3292 9.50533,2.60471 18.69098,5.7034 27.91614,8.75169 0,0 -54.01575,47.52807 -54.01575,47.52807 l 0,0 c -8.4382,-3.40424 -16.89109,-6.79977 -25.79557,-9.57589 -8.57323,-2.45913 -12.34603,-3.69686 -21.40327,-5.6193 -17.97019,-3.81424 -36.62508,-5.75713 -55.28557,-6.85647 -38.07138,-1.35959 -76.19759,-0.54705 -114.23315,1.10003 -23.09925,1.35509 -46.08501,3.34425 -68.76461,6.80778 -15.13325,2.0822 -30.48725,3.66974 -45.20368,6.98503 -11.28481,2.74522 -22.86817,5.31954 -32.35901,10.63457 0,0 47.22198,-52.06315 47.22198,-52.06315 z"
+         id="path2993"
+         style="fill:#ff6600;fill-opacity:1;stroke:none" />
+      <text
+         transform="matrix(1,0,-0.27489011,1,0,0)"
+         sodipodi:linespacing="125%"
+         id="text2985"
+         y="274.07809"
+         x="209.79208"
+         style="font-size:163.89935303px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#aa0000;fill-opacity:1;stroke:none;font-family:Pacifico;-inkscape-font-specification:Pacifico"
+         xml:space="preserve"><tspan
+           id="tspan2989"
+           y="274.07809"
+           x="209.79208"
+           sodipodi:role="line">Paté</tspan></text>
+    </g>
+    <g
+       id="g2997-3"
+       transform="matrix(1.6008082,0,0,1.6008082,-129.83603,277.29836)"
+       inkscape:export-filename="/home/syn/workspace/medea/resources/textures/pate_b.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 148.51872,275.80749 c 10.33708,-4.01391 21.97998,-6.04778 33.18657,-8.51625 15.25505,-2.49064 30.6606,-4.55207 46.08357,-6.45643 22.30755,-3.23689 45.01969,-3.97582 67.71242,-4.47629 38.20014,-0.065 76.45347,-1.20203 114.64285,-0.57259 27.62945,0.6396 54.48312,5.64334 80.29708,12.3292 9.50533,2.60471 18.69098,5.7034 27.91614,8.75169 0,0 -54.01575,47.52807 -54.01575,47.52807 l 0,0 c -8.4382,-3.40424 -16.89109,-6.79977 -25.79557,-9.57589 -8.57323,-2.45913 -12.34603,-3.69686 -21.40327,-5.6193 -17.97019,-3.81424 -36.62508,-5.75713 -55.28557,-6.85647 -38.07138,-1.35959 -76.19759,-0.54705 -114.23315,1.10003 -23.09925,1.35509 -46.08501,3.34425 -68.76461,6.80778 -15.13325,2.0822 -30.48725,3.66974 -45.20368,6.98503 -11.28481,2.74522 -22.86817,5.31954 -32.35901,10.63457 0,0 47.22198,-52.06315 47.22198,-52.06315 z"
+         id="path2993-9"
+         style="fill:#ff6600;fill-opacity:1;stroke:none" />
+      <text
+         transform="matrix(1,0,-0.27489011,1,0,0)"
+         sodipodi:linespacing="125%"
+         id="text2985-3"
+         y="274.07809"
+         x="209.79208"
+         style="font-size:163.89935303px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#2c89a0;fill-opacity:1;stroke:none;font-family:Pacifico;-inkscape-font-specification:Pacifico"
+         xml:space="preserve"><tspan
+           id="tspan2989-3"
+           y="274.07809"
+           x="209.79208"
+           sodipodi:role="line">Paté</tspan></text>
+    </g>
+  </g>
+</svg>

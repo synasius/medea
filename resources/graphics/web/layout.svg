@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="2000"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="logo.svg"
+   style="display:inline">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4171">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.82840234;"
+         offset="0"
+         id="stop4173" />
+      <stop
+         id="stop4181"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:1;" />
+    </linearGradient>
+    <filter
+       id="filter3211"
+       inkscape:label="Drop shadow"
+       width="1.5"
+       height="1.5"
+       x="-.25"
+       y="-.25">
+      <feGaussianBlur
+         id="feGaussianBlur3213"
+         in="SourceAlpha"
+         stdDeviation="10"
+         result="blur" />
+      <feColorMatrix
+         id="feColorMatrix3215"
+         result="bluralpha"
+         type="matrix"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.6 0 " />
+      <feOffset
+         id="feOffset3217"
+         in="bluralpha"
+         dx="0"
+         dy="0"
+         result="offsetBlur" />
+      <feMerge
+         id="feMerge3219">
+        <feMergeNode
+           id="feMergeNode3221"
+           in="offsetBlur" />
+        <feMergeNode
+           id="feMergeNode3223"
+           in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.64772086"
+     inkscape:cx="561.5581"
+     inkscape:cy="1771.669"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3005"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+    <sodipodi:guide
+       position="0,2000"
+       orientation="120,0"
+       id="guide3002" />
+    <sodipodi:guide
+       position="0,1880"
+       orientation="0,1020"
+       id="guide3004" />
+    <sodipodi:guide
+       position="1020,1880"
+       orientation="-120,0"
+       id="guide3006" />
+    <sodipodi:guide
+       position="1020,2000"
+       orientation="0,-1020"
+       id="guide3008" />
+    <sodipodi:guide
+       position="710,1880"
+       orientation="360,0"
+       id="guide3010" />
+    <sodipodi:guide
+       position="710,1520"
+       orientation="0,310"
+       id="guide3012" />
+    <sodipodi:guide
+       position="1020,1520"
+       orientation="-360,0"
+       id="guide3014" />
+    <sodipodi:guide
+       position="1020,1880"
+       orientation="0,-310"
+       id="guide3016" />
+    <sodipodi:guide
+       position="0,1520"
+       orientation="70,0"
+       id="guide3018" />
+    <sodipodi:guide
+       position="0,1450"
+       orientation="0,1020"
+       id="guide3020" />
+    <sodipodi:guide
+       position="1020,1450"
+       orientation="-70,0"
+       id="guide3022" />
+    <sodipodi:guide
+       position="1020,1520"
+       orientation="0,-1020"
+       id="guide3024" />
+    <sodipodi:guide
+       position="0,1880"
+       orientation="360,0"
+       id="guide3026" />
+    <sodipodi:guide
+       position="0,1520"
+       orientation="0,710"
+       id="guide3028" />
+    <sodipodi:guide
+       position="710,1520"
+       orientation="-360,0"
+       id="guide3030" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,947.63782)"
+     style="display:inline">
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke:none"
+       id="rect3047"
+       width="1020"
+       height="120"
+       x="0"
+       y="-947.63782" />
+    <g
+       transform="matrix(5.78601,0,0,5.78601,-795.14316,-3612.0426)"
+       id="g2990"
+       inkscape:export-filename="/home/syn/workspace/medea/resources/graphics/web/logo.png"
+       inkscape:export-xdpi="299.56033"
+       inkscape:export-ydpi="299.56033">
+      <text
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="/home/syn/workspace/medea/design/logo_medea.png"
+         xml:space="preserve"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+         x="184.57144"
+         y="478.07648"
+         id="text2985"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan2987"
+           x="184.57144"
+           y="478.07648"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:Impact;-inkscape-font-specification:Impact Bold">ea</tspan></text>
+      <text
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="/home/syn/workspace/medea/design/logo_medea.png"
+         transform="matrix(1,0,-0.31201963,1,0,0)"
+         xml:space="preserve"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff9955;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+         x="311.61484"
+         y="478.3494"
+         id="text3007"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3009"
+           x="311.61484"
+           y="478.3494">ed</tspan></text>
+      <text
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="/home/syn/workspace/medea/design/logo_medea.png"
+         xml:space="preserve"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+         x="147.35599"
+         y="478.31085"
+         id="text3011"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3013"
+           x="147.35599"
+           y="478.31085">m</tspan></text>
+    </g>
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke:none;display:inline"
+       id="rect3047-7"
+       width="1020"
+       height="70"
+       x="0"
+       y="-467.63782" />
+    <rect
+       style="fill:#808080;fill-opacity:1;stroke:none"
+       id="rect3899"
+       width="1020"
+       height="360"
+       x="0"
+       y="-827.63782" />
+    <rect
+       style="fill:#666666;fill-opacity:1;stroke:none"
+       id="rect3901"
+       width="300"
+       height="360"
+       x="710"
+       y="-827.63782" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect3903"
+       width="440"
+       height="320"
+       x="20"
+       y="140"
+       transform="translate(0,-947.63782)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="export"
+     style="display:none">
+    <rect
+       style="color:#000000;fill:#ececec;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3007"
+       width="1020"
+       height="120"
+       x="0"
+       y="0" />
+    <rect
+       style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3009"
+       width="310"
+       height="360"
+       x="710"
+       y="120" />
+    <rect
+       style="color:#000000;fill:#b3b3b3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3011"
+       width="1020"
+       height="70"
+       x="0"
+       y="480" />
+    <rect
+       style="color:#000000;fill:#f9f9f9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3013"
+       width="710"
+       height="360"
+       x="0"
+       y="120" />
+  </g>
+</svg>

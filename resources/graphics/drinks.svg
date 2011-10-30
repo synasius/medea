@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="Nuovo documento 1">
+  <defs
+     id="defs4">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3009"
+       is_visible="true"
+       pattern="m 17.67767,-2.5253814 0,10 10,-5 z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <filter
+       inkscape:collect="always"
+       id="filter3869"
+       x="-0.09268841"
+       width="1.1853768"
+       y="-0.15928885"
+       height="1.3185777">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="5.100578"
+         id="feGaussianBlur3871" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter3894"
+       x="-0.099441874"
+       width="1.1988837"
+       y="-0.14163334"
+       height="1.2832667">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="4.1239892"
+         id="feGaussianBlur3896" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3869-5"
+       x="-0.092688411"
+       width="1.1853768"
+       y="-0.15928885"
+       height="1.3185776">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="5.100578"
+         id="feGaussianBlur3871-7" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.26139154"
+     inkscape:cx="-46.905732"
+     inkscape:cy="626.0496"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="1,0"
+       position="128.57143,778.57143"
+       id="guide3784" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="359.28571,803.57143"
+       id="guide3786" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0.8;fill:#4d4d4d;fill-opacity:1;stroke:#ffffff;stroke-width:5.95705891;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3788"
+       width="1085.5571"
+       height="1490.2505"
+       x="-5.7142868"
+       y="-21.923531" />
+    <path
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.925529;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 74.49252,251.05169 10.365604,22.34 c 0.01974,-0.01 0.04165,-0.0222 0.06307,-0.0317 0.06258,-0.0312 0.129291,-0.0641 0.20022,-0.0988 0.262779,-0.12881 0.541951,-0.26175 0.836822,-0.40042 1.148781,-0.54027 2.337657,-1.07217 3.561154,-1.60549 0,0 3e-5,0 3e-5,0 4.666289,-2.03404 9.468713,-3.91281 14.36591,-5.70455 0,0 0,0 3e-5,0 17.87882,-6.54124 36.4144,-11.6155 55.271,-15.59137 0,-2e-5 0,-2e-5 2e-5,-2e-5 0,0 0,0 0,0 64.48375,-13.59935 132.09813,-13.53259 197.65172,-1.52954 3e-5,0 3e-5,0 5e-5,0 66.7421,12.27365 135.42218,13.93493 201.95617,2.95837 19.18277,-3.16483 38.20114,-7.36074 56.77377,-12.97966 5.04062,-1.52497 10.05034,-3.15485 14.99505,-4.95616 0,0 0,0 0,0 4e-5,0 4e-5,0 4e-5,0 1.29056,-0.47015 2.57694,-0.95201 3.85464,-1.45493 3e-5,0 3e-5,-3e-5 3e-5,-3e-5 0.32727,-0.1288 0.65401,-0.25901 0.97961,-0.39182 0.0827,-0.0337 0.1655,-0.0677 0.24821,-0.10196 0.0284,-0.0123 0.0566,-0.0246 0.0855,-0.0357 3e-5,-2e-5 5e-5,-2e-5 5e-5,-2e-5 0,0 -2e-5,0 -5e-5,2e-5 -0.0288,0.0123 -0.0576,0.0222 -0.087,0.0317 -0.084,0.0308 -0.1682,0.0608 -0.25238,0.0911 -0.33102,0.11846 -0.66292,0.23421 -0.99532,0.34856 -4e-5,0 -4e-5,0 -4e-5,2e-5 -1.2978,0.44645 -2.60254,0.87125 -3.91098,1.28419 0,0 -4e-5,0 -4e-5,0 -5.01327,1.58215 -10.07743,2.98826 -15.16727,4.28876 -18.75391,4.79172 -37.83447,8.13079 -57.01393,10.44243 0,3e-5 -3e-5,3e-5 -3e-5,3e-5 0,0 0,0 0,0 -66.51251,8.01669 -134.1037,3.32242 -198.9885,-11.54197 -2e-5,0 -2e-5,0 -2e-5,0 -66.41347,-15.20513 -136.05845,-18.39813 -204.01343,-7.18677 0,0 0,0 0,0 -19.84525,3.27442 -39.60996,7.77559 -59.009253,13.91275 -2.9e-5,3e-5 -2.9e-5,3e-5 -2.9e-5,3e-5 -5.311341,1.68022 -10.641375,3.50458 -15.957991,5.54612 0,0 0,0 0,0 0,0 -3e-5,0 -3e-5,0 -1.39353,0.53511 -2.811416,1.09713 -4.249445,1.69644 -0.369072,0.15368 -0.752505,0.31623 -1.149772,0.48867 -0.09699,0.0421 -0.197999,0.0862 -0.303192,0.13274 -0.0362,0.0173 -0.07289,0.0325 -0.110082,0.049 z"
+       id="path3007"
+       inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_cola.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:218.82182312px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       x="102.71791"
+       y="234.48524"
+       id="text3011"
+       sodipodi:linespacing="125%"
+       transform="matrix(1.1430365,0,-0.24614,0.8748627,0,0)"
+       inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_cola.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3013"
+         x="102.71791"
+         y="234.48524">Drink</tspan></text>
+    <g
+       id="g3898"
+       inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+         id="path3007-6"
+         d="m 54.655191,596.21472 10.365603,22.34 c 0.01974,-0.01 0.04165,-0.0222 0.06307,-0.0317 0.06258,-0.0312 0.129291,-0.0641 0.20022,-0.0988 0.262779,-0.12881 0.541951,-0.26175 0.836822,-0.40042 1.148781,-0.54027 2.337657,-1.07217 3.561154,-1.60549 0,0 3e-5,0 3e-5,0 4.666289,-2.03404 9.468713,-3.91281 14.36591,-5.70455 0,0 0,0 3e-5,0 17.87882,-6.54124 36.4144,-11.6155 55.271,-15.59137 0,-2e-5 0,-2e-5 2e-5,-2e-5 0,0 0,0 0,0 64.48375,-13.59935 132.09813,-13.53259 197.65172,-1.52954 3e-5,0 3e-5,0 5e-5,0 66.7421,12.27365 135.42218,13.93493 201.95617,2.95837 19.18277,-3.16483 38.20114,-7.36074 56.77377,-12.97966 5.04062,-1.52497 10.05034,-3.15485 14.99505,-4.95616 0,0 0,0 0,0 4e-5,0 4e-5,0 4e-5,0 1.29056,-0.47015 2.57694,-0.95201 3.85464,-1.45493 3e-5,0 3e-5,-3e-5 3e-5,-3e-5 0.32727,-0.1288 0.65401,-0.25901 0.97961,-0.39182 0.0827,-0.0337 0.1655,-0.0677 0.24821,-0.10196 0.0284,-0.0123 0.0566,-0.0246 0.0855,-0.0357 3e-5,-2e-5 5e-5,-2e-5 5e-5,-2e-5 0,0 -2e-5,0 -5e-5,2e-5 -0.0288,0.0123 -0.0576,0.0222 -0.087,0.0317 -0.084,0.0308 -0.1682,0.0608 -0.25238,0.0911 -0.33102,0.11846 -0.66292,0.23421 -0.99532,0.34856 -4e-5,0 -4e-5,0 -4e-5,2e-5 -1.2978,0.44645 -2.60254,0.87125 -3.91098,1.28419 0,0 -4e-5,0 -4e-5,0 -5.01327,1.58215 -10.07743,2.98826 -15.16727,4.28876 -18.75391,4.79172 -37.83447,8.13079 -57.01393,10.44243 0,3e-5 -3e-5,3e-5 -3e-5,3e-5 0,0 0,0 0,0 -66.51251,8.01669 -134.1037,3.32242 -198.9885,-11.54197 -2e-5,0 -2e-5,0 -2e-5,0 -66.41347,-15.20513 -136.05845,-18.39813 -204.01343,-7.18677 0,0 0,0 0,0 -19.84525,3.27442 -39.60996,7.77559 -59.009253,13.91275 -2.9e-5,3e-5 -2.9e-5,3e-5 -2.9e-5,3e-5 -5.311341,1.68022 -10.641375,3.50458 -15.957991,5.54612 0,0 0,0 0,0 0,0 -3e-5,0 -3e-5,0 -1.393529,0.53511 -2.811415,1.09713 -4.249444,1.69644 -0.369072,0.15368 -0.752505,0.31623 -1.149772,0.48867 -0.09699,0.0421 -0.197999,0.0862 -0.303192,0.13274 -0.0362,0.0173 -0.07289,0.0325 -0.110082,0.049 z"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.925529;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+      <text
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+         transform="matrix(1.1430365,0,-0.24614,0.8748627,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3011-4"
+         y="629.01904"
+         x="170.32141"
+         style="font-size:218.82182312px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+         xml:space="preserve"><tspan
+           y="629.01904"
+           x="170.32141"
+           id="tspan3013-9"
+           sodipodi:role="line">Drink</tspan></text>
+      <text
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+         transform="matrix(1,-0.37518246,0,1,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3814-2"
+         y="777.77228"
+         x="532.91711"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#b3b3b3;fill-opacity:1;stroke:none;filter:url(#filter3894);font-family:Saab;-inkscape-font-specification:Saab Bold"
+         xml:space="preserve"><tspan
+           y="777.77228"
+           x="532.91711"
+           id="tspan3816-9"
+           sodipodi:role="line">light</tspan></text>
+      <text
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+         transform="matrix(1,-0.37518246,0,1,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3814"
+         y="777.77228"
+         x="532.91711"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;font-family:Saab;-inkscape-font-specification:Saab Bold"
+         xml:space="preserve"><tspan
+           y="777.77228"
+           x="532.91711"
+           id="tspan3816"
+           sodipodi:role="line">light</tspan></text>
+    </g>
+    <g
+       id="g3907"
+       inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_lemon.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+         id="path3007-6-3"
+         d="m 54.655191,916.21472 10.365603,22.34 c 0.01974,-0.01 0.04165,-0.0222 0.06307,-0.0317 0.06258,-0.0312 0.129291,-0.0641 0.20022,-0.0988 0.262779,-0.12881 0.541951,-0.26175 0.836822,-0.40042 1.148781,-0.54027 2.337657,-1.07217 3.561154,-1.60549 0,0 3e-5,0 3e-5,0 4.666289,-2.03404 9.468713,-3.91281 14.36591,-5.70455 0,0 0,0 3e-5,0 17.87882,-6.54124 36.4144,-11.6155 55.271,-15.59137 0,-2e-5 0,-2e-5 2e-5,-2e-5 0,0 0,0 0,0 64.48375,-13.59935 132.09813,-13.53259 197.65172,-1.52954 3e-5,0 3e-5,0 5e-5,0 66.7421,12.27365 135.42218,13.93493 201.95617,2.95837 19.18277,-3.16483 38.20114,-7.36074 56.77377,-12.97966 5.04062,-1.52497 10.05034,-3.15485 14.99505,-4.95616 0,0 0,0 0,0 4e-5,0 4e-5,0 4e-5,0 1.29056,-0.47015 2.57694,-0.95201 3.85464,-1.45493 3e-5,0 3e-5,-3e-5 3e-5,-3e-5 0.32727,-0.1288 0.65401,-0.25901 0.97961,-0.39182 0.0827,-0.0337 0.1655,-0.0677 0.24821,-0.10196 0.0284,-0.0123 0.0566,-0.0246 0.0855,-0.0357 3e-5,-2e-5 5e-5,-2e-5 5e-5,-2e-5 0,0 -2e-5,0 -5e-5,2e-5 -0.0288,0.0123 -0.0576,0.0222 -0.087,0.0317 -0.084,0.0308 -0.1682,0.0608 -0.25238,0.0911 -0.33102,0.11846 -0.66292,0.23421 -0.99532,0.34856 -4e-5,0 -4e-5,0 -4e-5,2e-5 -1.2978,0.44645 -2.60254,0.87125 -3.91098,1.28419 0,0 -4e-5,0 -4e-5,0 -5.01327,1.58215 -10.07743,2.98826 -15.16727,4.28876 -18.75391,4.79172 -37.83447,8.13079 -57.01393,10.44243 0,3e-5 -3e-5,3e-5 -3e-5,3e-5 0,0 0,0 0,0 -66.51251,8.01669 -134.1037,3.32242 -198.9885,-11.54197 -2e-5,0 -2e-5,0 -2e-5,0 -66.41347,-15.20513 -136.05845,-18.39813 -204.01343,-7.18677 0,0 0,0 0,0 -19.84525,3.27442 -39.60996,7.77559 -59.009253,13.91275 -2.9e-5,3e-5 -2.9e-5,3e-5 -2.9e-5,3e-5 -5.311341,1.68022 -10.641375,3.50458 -15.957991,5.54612 0,0 0,0 0,0 0,0 -3e-5,0 -3e-5,0 -1.393529,0.53511 -2.811415,1.09713 -4.249444,1.69644 -0.369072,0.15368 -0.752505,0.31623 -1.149772,0.48867 -0.09699,0.0421 -0.197999,0.0862 -0.303192,0.13274 -0.0362,0.0173 -0.07289,0.0325 -0.110082,0.049 z"
+         style="fill:#eeffaa;fill-rule:evenodd;stroke:#eeffaa;stroke-width:4.92552900000000005;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+      <text
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+         transform="matrix(1.1430365,0,-0.24614,0.8748627,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3011-4-7"
+         y="994.79053"
+         x="249.0863"
+         style="font-size:218.82182312000000479px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#eeffaa;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+         xml:space="preserve"><tspan
+           y="994.79053"
+           x="249.0863"
+           id="tspan3013-9-2"
+           sodipodi:role="line">Drink</tspan></text>
+      <text
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+         transform="matrix(1,-0.37518246,0,1,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3814-6-0"
+         y="1097.7722"
+         x="532.91711"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#24221c;fill-opacity:1;stroke:none;filter:url(#filter3869);font-family:Saab;-inkscape-font-specification:Saab Bold"
+         xml:space="preserve"><tspan
+           y="1097.7722"
+           x="532.91711"
+           id="tspan3816-5-3"
+           sodipodi:role="line">lemon</tspan></text>
+      <text
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+         transform="matrix(1,-0.37518246,0,1,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3814-6"
+         y="1097.7722"
+         x="532.91711"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ccff00;fill-opacity:1;stroke:none;font-family:Saab;-inkscape-font-specification:Saab Bold"
+         xml:space="preserve"><tspan
+           y="1097.7722"
+           x="532.91711"
+           id="tspan3816-5"
+           sodipodi:role="line">lemon</tspan></text>
+    </g>
+    <g
+       id="g3907-6"
+       inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_orange.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"
+       transform="translate(0,320)">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+         id="path3007-6-3-3"
+         d="m 54.655191,916.21472 10.365603,22.34 c 0.01974,-0.01 0.04165,-0.0222 0.06307,-0.0317 0.06258,-0.0312 0.129291,-0.0641 0.20022,-0.0988 0.262779,-0.12881 0.541951,-0.26175 0.836822,-0.40042 1.148781,-0.54027 2.337657,-1.07217 3.561154,-1.60549 0,0 3e-5,0 3e-5,0 4.666289,-2.03404 9.468713,-3.91281 14.36591,-5.70455 0,0 0,0 3e-5,0 17.87882,-6.54124 36.4144,-11.6155 55.271,-15.59137 0,-2e-5 0,-2e-5 2e-5,-2e-5 0,0 0,0 0,0 64.48375,-13.59935 132.09813,-13.53259 197.65172,-1.52954 3e-5,0 3e-5,0 5e-5,0 66.7421,12.27365 135.42218,13.93493 201.95617,2.95837 19.18277,-3.16483 38.20114,-7.36074 56.77377,-12.97966 5.04062,-1.52497 10.05034,-3.15485 14.99505,-4.95616 0,0 0,0 0,0 4e-5,0 4e-5,0 4e-5,0 1.29056,-0.47015 2.57694,-0.95201 3.85464,-1.45493 3e-5,0 3e-5,-3e-5 3e-5,-3e-5 0.32727,-0.1288 0.65401,-0.25901 0.97961,-0.39182 0.0827,-0.0337 0.1655,-0.0677 0.24821,-0.10196 0.0284,-0.0123 0.0566,-0.0246 0.0855,-0.0357 3e-5,-2e-5 5e-5,-2e-5 5e-5,-2e-5 0,0 -2e-5,0 -5e-5,2e-5 -0.0288,0.0123 -0.0576,0.0222 -0.087,0.0317 -0.084,0.0308 -0.1682,0.0608 -0.25238,0.0911 -0.33102,0.11846 -0.66292,0.23421 -0.99532,0.34856 -4e-5,0 -4e-5,0 -4e-5,2e-5 -1.2978,0.44645 -2.60254,0.87125 -3.91098,1.28419 0,0 -4e-5,0 -4e-5,0 -5.01327,1.58215 -10.07743,2.98826 -15.16727,4.28876 -18.75391,4.79172 -37.83447,8.13079 -57.01393,10.44243 0,3e-5 -3e-5,3e-5 -3e-5,3e-5 0,0 0,0 0,0 -66.51251,8.01669 -134.1037,3.32242 -198.9885,-11.54197 -2e-5,0 -2e-5,0 -2e-5,0 -66.41347,-15.20513 -136.05845,-18.39813 -204.01343,-7.18677 0,0 0,0 0,0 -19.84525,3.27442 -39.60996,7.77559 -59.009253,13.91275 -2.9e-5,3e-5 -2.9e-5,3e-5 -2.9e-5,3e-5 -5.311341,1.68022 -10.641375,3.50458 -15.957991,5.54612 0,0 0,0 0,0 0,0 -3e-5,0 -3e-5,0 -1.393529,0.53511 -2.811415,1.09713 -4.249444,1.69644 -0.369072,0.15368 -0.752505,0.31623 -1.149772,0.48867 -0.09699,0.0421 -0.197999,0.0862 -0.303192,0.13274 -0.0362,0.0173 -0.07289,0.0325 -0.110082,0.049 z"
+         style="fill:#ffccaa;fill-rule:evenodd;stroke:#ffccaa;stroke-width:4.92552900000000005;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+      <text
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+         transform="matrix(1.1430365,0,-0.24614,0.8748627,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3011-4-7-3"
+         y="994.79053"
+         x="249.0863"
+         style="font-size:218.82182312000000479px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffccaa;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+         xml:space="preserve"><tspan
+           y="994.79053"
+           x="249.0863"
+           id="tspan3013-9-2-2"
+           sodipodi:role="line">Drink</tspan></text>
+      <text
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+         transform="matrix(1,-0.37518246,0,1,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3814-6-0-4"
+         y="1097.7722"
+         x="532.91711"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#24221c;fill-opacity:1;stroke:none;filter:url(#filter3869-5);font-family:Saab;-inkscape-font-specification:Saab Bold"
+         xml:space="preserve"><tspan
+           y="1097.7722"
+           x="532.91711"
+           id="tspan3816-5-3-7"
+           sodipodi:role="line">orange</tspan></text>
+      <text
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="/home/syn/workspace/medea/resources/textures/drink_light.png"
+         transform="matrix(1,-0.37518246,0,1,0,0)"
+         sodipodi:linespacing="125%"
+         id="text3814-6-8"
+         y="1097.7722"
+         x="532.91711"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Saab;-inkscape-font-specification:Saab Bold"
+         xml:space="preserve"><tspan
+           y="1097.7722"
+           x="532.91711"
+           id="tspan3816-5-5"
+           sodipodi:role="line">orange</tspan></text>
+    </g>
+  </g>
+</svg>

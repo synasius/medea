@@ -9,3 +9,5 @@ syntax: glob
 *.out
 *.pdf
 
+*.blend1
+*.blend2

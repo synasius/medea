@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="milk.svg">
+  <defs
+     id="defs4">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3913"
+       is_visible="true"
+       pattern="M 0,5 C 0,2.24 2.24,0 5,0 7.76,0 10,2.24 10,5 10,7.76 7.76,10 5,10 2.24,10 0,7.76 0,5 z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="170.66233"
+     inkscape:cy="-25.712183"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3897"
+       inkscape:export-filename="/home/syn/workspace/medea/resources/textures/milk_b.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         id="rect2985"
+         d="m -51.428581,494.47893 200.000001,0 200,-54.9738 200,54.9738 200,0 0,145.0262 -800.000001,0 z"
+         style="opacity:1;fill:#95ccda;fill-opacity:1;stroke:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2988-4"
+         y="604.78967"
+         x="240.75983"
+         style="font-size:111.95767211999999802px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:Vintage;-inkscape-font-specification:Vintage"
+         xml:space="preserve"><tspan
+           y="604.78967"
+           x="240.75983"
+           id="tspan2990-2"
+           sodipodi:role="line">Milk</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text2988"
+         y="600.78967"
+         x="236.75983"
+         style="font-size:111.95767212px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Vintage;-inkscape-font-specification:Vintage"
+         xml:space="preserve"><tspan
+           y="600.78967"
+           x="236.75983"
+           id="tspan2990"
+           sodipodi:role="line">Milk</tspan></text>
+      <path
+         sodipodi:type="inkscape:offset"
+         inkscape:radius="-9.8520756"
+         inkscape:original="M 348.5625 439.5 L 148.5625 494.46875 L -51.4375 494.46875 L -51.4375 639.5 L 748.5625 639.5 L 748.5625 494.46875 L 548.5625 494.46875 L 348.5625 439.5 z "
+         style="fill:none;stroke:#ffffff;stroke-opacity:1;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path4022"
+         d="m 348.5625,449.71875 -197.375,54.25 a 9.8530608,9.8530608 0 0 1 -2.625,0.34375 l -190.15625,0 0,125.34375 780.3125,0 0,-125.34375 -190.15625,0 a 9.8530608,9.8530608 0 0 1 -2.625,-0.34375 l -197.375,-54.25 z" />
+    </g>
+    <g
+       transform="translate(0,2.6171874e-6)"
+       id="g3897-8"
+       style="fill:none">
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         id="rect2985-0"
+         d="m -51.428581,494.47893 200.000001,0 200,-54.9738 200,54.9738 200,0 0,145.0262 -800.000001,0 z"
+         style="fill:none;fill-opacity:1;stroke:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2988-4-2"
+         y="604.78967"
+         x="240.75983"
+         style="font-size:111.95767211999999802px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:none;font-family:Vintage;-inkscape-font-specification:Vintage"
+         xml:space="preserve"><tspan
+           y="604.78967"
+           x="240.75983"
+           id="tspan2990-2-3"
+           sodipodi:role="line">Milk</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text2988-54"
+         y="600.78967"
+         x="236.75983"
+         style="font-size:111.95767211999999802px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:none;font-family:Vintage;-inkscape-font-specification:Vintage"
+         xml:space="preserve"><tspan
+           y="600.78967"
+           x="236.75983"
+           id="tspan2990-3"
+           sodipodi:role="line">Milk</tspan></text>
+    </g>
+    <g
+       transform="translate(1.1022558,261.50826)"
+       id="g3897-84"
+       inkscape:export-filename="/home/syn/workspace/medea/resources/textures/milk_p.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         id="rect2985-4"
+         d="m -51.428581,494.47893 200.000001,0 200,-54.9738 200,54.9738 200,0 0,145.0262 -800.000001,0 z"
+         style="fill:#a793ac;fill-opacity:1;stroke:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2988-4-0"
+         y="604.78967"
+         x="240.75983"
+         style="font-size:111.95767212px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:Vintage;-inkscape-font-specification:Vintage"
+         xml:space="preserve"><tspan
+           y="604.78967"
+           x="240.75983"
+           id="tspan2990-2-1"
+           sodipodi:role="line">Milk</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text2988-9"
+         y="600.78967"
+         x="236.75983"
+         style="font-size:111.95767212px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Vintage;-inkscape-font-specification:Vintage"
+         xml:space="preserve"><tspan
+           y="600.78967"
+           x="236.75983"
+           id="tspan2990-1"
+           sodipodi:role="line">Milk</tspan></text>
+      <path
+         sodipodi:type="inkscape:offset"
+         inkscape:radius="-9.8520756"
+         inkscape:original="M 348.5625 439.5 L 148.5625 494.46875 L -51.4375 494.46875 L -51.4375 639.5 L 748.5625 639.5 L 748.5625 494.46875 L 548.5625 494.46875 L 348.5625 439.5 z "
+         style="fill:none;stroke:#ffffff;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="path4022-8"
+         d="m 348.5625,449.71875 -197.375,54.25 a 9.8530608,9.8530608 0 0 1 -2.625,0.34375 l -190.15625,0 0,125.34375 780.3125,0 0,-125.34375 -190.15625,0 a 9.8530608,9.8530608 0 0 1 -2.625,-0.34375 l -197.375,-54.25 z" />
+    </g>
+  </g>
+</svg>
