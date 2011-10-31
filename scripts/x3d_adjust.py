@@ -63,7 +63,7 @@ TEXTURE_TO_FIX = ("beer_c_png", "beer_b_png", "water_n_png", "water_s_png",
                   'cheese_b_png', 'cheese_g_png', 'choco_n_png', 
                   'choco_s_png', 'choco_h_png', 'beans_b_png', 'beans_r_png',
                   'biscuit_straw_png', 'biscuit_choco_png', 'peas_g_png',
-                  'tuna_b_png', 'tuna_y_png', 'tuna_r_png',)
+                  'tuna_b_png', 'tuna_y_png', 'tuna_r_png', 'IM_beer_b_png',)
 
 PLANES_TO_FIX = ("G_beer_cap","G_fridge_side_panel")
 

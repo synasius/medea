@@ -11,7 +11,7 @@
 <Transform DEF="Cylinder_116" rotation="-1.000000 0.000000 0.000000 1.570796" scale="0.046500 0.046500 0.044927" translation="0.000000 0.000000 0.000000">
 <Group DEF="G_beans_001">
 <Shape>
-<Appearance><MultiTexture mode="BLENDTEXTUREALPHA"><ImageTexture DEF="beans_b_png" repeatS="false" repeatT="false" url="../textures/beans_b.png"><TextureProperties boundaryModeS="CLAMP_TO_BOUNDARY" boundaryModeT="CLAMP_TO_BOUNDARY"/></ImageTexture></MultiTexture>
+<Appearance><MultiTexture mode="BLENDTEXTUREALPHA"><ImageTexture DEF="beans_b_png" repeatS="false" repeatT="false" url="/static/x3d/textures/beans_b.png"><TextureProperties boundaryModeS="CLAMP_TO_BOUNDARY" boundaryModeT="CLAMP_TO_BOUNDARY"/></ImageTexture></MultiTexture>
 
 <TextureTransform rotation="0.000000" scale="1.000000 1.000000" translation="0.000000 0.000000"/>
 <Material DEF="MA_tin_blue_beans" ambientIntensity="0.333" diffuseColor="0.467 0.467 0.467" emissiveColor="0.0 0.0 0.0" shininess="0.127" specularColor="0.737 0.737 0.737" transparency="0.0"/>

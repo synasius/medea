@@ -101,10 +101,12 @@ $def with (library=None)
                         <ul>
                         $for x3d, thumb in library:        
                             <li>
-                                <div class="grid_1 draggable">
-                                    <img src="$thumb" width="50px"></img>
+                            <div class="grid_1 draggable">
+                                <div id="libthumb">
+                                    <img src="$thumb" width="50px"></img>        
                                     <inline url="$x3d"></inline>
                                 </div>
+                            </div>
                             </li>
                         </ul>
                     $else: 

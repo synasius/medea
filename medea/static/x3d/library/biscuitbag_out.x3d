@@ -11,7 +11,7 @@
 <Transform DEF="Bag_256" rotation="-1.000000 0.000000 0.000000 1.570796" scale="0.057994 0.057994 0.057994" translation="0.000000 0.000000 0.000000">
 <Group DEF="G_biscuitbag_yellow_001">
 <Shape>
-<Appearance><MultiTexture mode="BLENDTEXTUREALPHA"><ImageTexture DEF="biscuit_choco_png" repeatS="false" repeatT="false" url="../textures/biscuit_choco.png"><TextureProperties boundaryModeS="CLAMP_TO_BOUNDARY" boundaryModeT="CLAMP_TO_BOUNDARY"/></ImageTexture></MultiTexture>
+<Appearance><MultiTexture mode="BLENDTEXTUREALPHA"><ImageTexture DEF="biscuit_choco_png" repeatS="false" repeatT="false" url="/static/x3d/textures/biscuit_choco.png"><TextureProperties boundaryModeS="CLAMP_TO_BOUNDARY" boundaryModeT="CLAMP_TO_BOUNDARY"/></ImageTexture></MultiTexture>
 
 <TextureTransform rotation="0.000000" scale="1.000000 1.000000" translation="0.000000 0.000000"/>
 <Material DEF="MA_choco_paper" ambientIntensity="0.333" diffuseColor="0.97 0.832 0.45" emissiveColor="0.0 0.0 0.0" shininess="0.117" specularColor="0.125 0.127 0.116" transparency="0.0"/>

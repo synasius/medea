@@ -11,7 +11,7 @@
 <Transform DEF="wine_bottle_white_007" rotation="-1.000000 0.000000 0.000000 1.570796" scale="0.047530 0.047530 0.047530" translation="0.000000 0.000000 0.000000">
 <Group DEF="G_wine_bottle_white_001">
 <Shape>
-<Appearance><MultiTexture mode="BLENDTEXTUREALPHA"><ImageTexture DEF="wine_w_png" repeatS="false" repeatT="false" url="../textures/wine_w.png"><TextureProperties boundaryModeS="CLAMP_TO_BOUNDARY" boundaryModeT="CLAMP_TO_BOUNDARY"/></ImageTexture></MultiTexture>
+<Appearance><MultiTexture mode="BLENDTEXTUREALPHA"><ImageTexture DEF="wine_w_png" repeatS="false" repeatT="false" url="/static/x3d/textures/wine_w.png"><TextureProperties boundaryModeS="CLAMP_TO_BOUNDARY" boundaryModeT="CLAMP_TO_BOUNDARY"/></ImageTexture></MultiTexture>
 
 <TextureTransform rotation="0.000000" scale="1.000000 1.000000" translation="0.000000 0.000000"/>
 <Material DEF="MA_dark_green_glass" ambientIntensity="0.333" diffuseColor="0.055 0.119 0.012" emissiveColor="0.0 0.0 0.0" shininess="0.662" specularColor="0.744 0.802 0.506" transparency="0.0"/>

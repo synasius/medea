@@ -26,13 +26,15 @@ def setup_logger():
 
 LOG = setup_logger()
 
-
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 TEMPLATES = os.path.join(BASE_PATH, 'templates/')
-
 STATIC_FILES = "static/"
 X3D_PATH = os.path.join(STATIC_FILES, 'x3d')
+IMAGES_PATH = os.path.join(STATIC_FILES, 'images')
+
+# object library settings
 LIBRARY_PATH = os.path.join(X3D_PATH, 'library')
+LIBRARY_NO_THUMB = os.path.join(IMAGES_PATH, 'nothumb.png')
 
 # Database settings
 

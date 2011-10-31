@@ -26,7 +26,7 @@
 <Transform DEF="beer_bottle_015" rotation="-1.000000 0.000000 0.000000 1.570796" scale="0.035216 0.035216 0.035216" translation="-0.000000 0.000196 0.000000">
 <Group DEF="G_beer_bottle_green_001">
 <Shape>
-<Appearance><MultiTexture mode="BLENDTEXTUREALPHA"><ImageTexture DEF="beer_b_png" repeatS="false" repeatT="false" url="../textures/beer_b.png"><TextureProperties boundaryModeS="CLAMP_TO_BOUNDARY" boundaryModeT="CLAMP_TO_BOUNDARY"/></ImageTexture></MultiTexture>
+<Appearance><MultiTexture mode="BLENDTEXTUREALPHA"><ImageTexture DEF="beer_b_png" repeatS="false" repeatT="false" url="/static/x3d/textures/beer_b.png"><TextureProperties boundaryModeS="CLAMP_TO_BOUNDARY" boundaryModeT="CLAMP_TO_BOUNDARY"/></ImageTexture></MultiTexture>
 
 <TextureTransform rotation="0.000000" scale="1.000000 1.000000" translation="0.000000 0.000000"/>
 <Material DEF="MA_green-glass" ambientIntensity="0.333" diffuseColor="0.024 0.2 0.0" emissiveColor="0.0 0.0 0.0" shininess="0.662" specularColor="0.744 0.802 0.506" transparency="0.0"/>

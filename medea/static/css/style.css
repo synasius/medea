@@ -58,9 +58,14 @@ nav ul li:hover {
 }
 
 .draggable {
-    background-color: #eeeeee;
-    /*width: 100px;
-    height: 60px;*/
+    background-color: #ffffff;
     border: 3px #000000 dashed;
     margin: 10px 10px;
+
 }
+#libthumb {
+    width: 50px;
+    margin: 0 auto;
+}
+
+

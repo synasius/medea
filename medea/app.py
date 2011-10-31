@@ -19,14 +19,16 @@ class editor(object):
 
 def parse_library(lib):
     import fnmatch
-    # list in lib directory and prepend the path
-    files = map(lambda x: os.path.join(lib,x), os.listdir(lib)) 
-    config.LOG.debug(files)
+    files = fnmatch.filter(os.listdir(lib), "*.x3d")
     
-    inlines = sorted(fnmatch.filter(files, "*.x3d"))
-    thumbs = sorted(fnmatch.filter(files, "*.png"))
-
-    return zip(inlines, thumbs)
+    # prepend the path to the x3d filename
+    inlines = [[os.path.join(lib, file)] for file in files]
+    
+    for file in inlines:
+        thumb = os.path.splitext(file[0])[0] + '.png'
+        file.append(os.path.exists(thumb) and thumb or config.LIBRARY_NO_THUMB)
+    
+    return inlines
 
 
 if __name__ == '__main__':
