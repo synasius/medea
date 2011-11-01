@@ -12,7 +12,7 @@ $def with (library=None)
         <link rel="stylesheet" type="text/css" href="/static/assets/css/reset.css" />
         <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
         
-        <script type="text/javascript" src="/static/js/jquery-1.6.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery-1.6.4.min.js"></script>
         <script type="text/javascript" src="/static/js/raphael-min.js"></script>
         <script type="text/javascript" src="/static/js/controller.js"></script>
         <script type="text/javascript" src="/static/js/medea.js"></script>
@@ -63,7 +63,10 @@ $def with (library=None)
                         <navigationinfo headlight="false" type="EXAMINE" avatarSize="0.25, 0.75, 0.20"></navigationinfo>
                         <viewpoint DEF='FrontView' description='Front View' position='0 1 2'></viewpoint>
                         
+                        <transform id="mainscene">
 <!--                         <inline url="/static/x3d/market/minimarket_out.x3d"></inline> -->
+                            <inline url="/static/x3d/market/scaffold.x3d"></inline>
+                        </transform>
                     </scene>
                 </x3d> 
             </div>

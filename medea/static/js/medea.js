@@ -4,11 +4,12 @@ $(function () {
     var controller = Raphael.controller(0, 0, 200, "controller");
     
     // object selection and movement
-    var medea = {};
+    medea = {};
     medea.transform = '<transform class="selectable" translation="0 1 0"/>';
     //TODO: put a slide in the UI to control this parameter
     medea.range = 1; // This defines the sensibility of the controller 
     medea.step = 0.785; // Rotation step
+    medea.cursor = "0 1 0"; // Point where the object is dropped
     medea.plane = null;
     medea.selected = null;
     medea.select = function () {
@@ -39,6 +40,8 @@ $(function () {
         var pos = {x: 0, y: 0, z: 0};
         if (coords) {
             var str = coords.split(" ");
+            if (str.length < 3) str = coords.split(",");
+
             pos.x = parseFloat(str[0]);
             pos.y = parseFloat(str[1]);
             pos.z = parseFloat(str[2]);
@@ -63,9 +66,7 @@ $(function () {
         
         // Delta
         var pos = medea.getPos($(medea.selected).attr('translation'));
-        
-        // TODO: i'd like to implement continuos movement while the cursor is grabbed aroud
-        //       varying movement speed based on vx and vy
+        console.log($(medea.selected).attr('translation'));
         
         pos[medea.plane[0]] += vu*medea.range;
         pos[medea.plane[1]] += vv*medea.range;            
@@ -82,12 +83,8 @@ $(function () {
     }
 
     controller.bind(medea.moving);
-
     
-    // On scene loading i need to bind all selectable transform to the select function 
-    $("#x3d_element transform.selectable").click(medea.select);
     $("#remove_bt").click(medea.remove);
-    
     
     // Drag&drop handling
     //Cambia il cursore sugli elementi trascinabili per renderli visibili
@@ -124,15 +121,16 @@ $(function () {
     })
     //Dragover indica l'evento "deposito l'elemento che ho trascinato nel target".
     .bind("drop", function (ev) {
-        //$(this).css("background-color", "#acd6ec");
         //con questa riga ottengo i dati salvati quando ho iniziato a trascinare l'oggetto'
         var tmp = ev.originalEvent.dataTransfer;
         var node = $(medea.transform).append(tmp.getData("node"));
-        
+        console.log(medea.cursor);
+        $(node).attr('translation', medea.cursor);
+
         $(this).find("scene").append(node);
         
-        //console.log(window.x3dom.runtime.viewpoint());
-        //console.log($("#x3d_element").runtime.getActiveBindable('Viewpoint'));
+        /*console.log(window.x3dom.runtime.viewpoint());
+          console.log($("#x3d_element").runtime.getActiveBindable('Viewpoint'));*/
 
         // Binding click event to selection function
         $(this).find("scene transform.selectable:last").click(medea.select);
@@ -171,6 +169,21 @@ $(function () {
     $("#rright").click(function (ev) {
         medea.rotate(false);
     });
+
+    // cursor handle
+
+    /* there is a problem with jQuery that prevents from binding events 
+       to scene-graph nodes usin click() function. so i'm using the standard
+       syntax
+    $("#mainscene").click(function (ev) {
+        console.log("Ciao");
+    });*/
+    document.getElementById("mainscene").onclick = function (ev) {
+        medea.cursor = ev.hitPnt;
+    };
+    // On scene loading i need to bind all selectable transform to the select function 
+    /* again this won't work with jquery
+    $(".selectable").click(medea.select); */
     
     // Initial setup 
     // TODO: create a init() function
@@ -181,7 +194,7 @@ $(function () {
     
     // set navigation mode to examine
     $("#examine").toggleClass("checked");
-    //window.x3dom.runtime.examine();
+    /*x3dom.runtime.examine();*/
 });
 
 
