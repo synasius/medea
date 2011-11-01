@@ -1,15 +1,12 @@
 $(function () {
-    
     // Loading controller
     var controller = Raphael.controller(0, 0, 200, "controller");
     
     // object selection and movement
     medea = {};
-    medea.transform = '<transform class="selectable" translation="0 1 0"/>';
     //TODO: put a slide in the UI to control this parameter
     medea.range = 1; // This defines the sensibility of the controller 
     medea.step = 0.785; // Rotation step
-    medea.cursor = "0 1 0"; // Point where the object is dropped
     medea.plane = null;
     medea.selected = null;
     medea.select = function () {
@@ -120,22 +117,27 @@ $(function () {
         return false;
     })
     //Dragover indica l'evento "deposito l'elemento che ho trascinato nel target".
-    .bind("drop", function (ev) {
-        //con questa riga ottengo i dati salvati quando ho iniziato a trascinare l'oggetto'
-        var tmp = ev.originalEvent.dataTransfer;
-        var node = $(medea.transform).append(tmp.getData("node"));
-        console.log(medea.cursor);
-        $(node).attr('translation', medea.cursor);
+    .bind("drop", function () {
+        var transform = '<transform class="selectable" translation="0 1 0"/>';
 
-        $(this).find("scene").append(node);
-        
-        /*console.log(window.x3dom.runtime.viewpoint());
-          console.log($("#x3d_element").runtime.getActiveBindable('Viewpoint'));*/
+        return function (ev) {
+            //con questa riga ottengo i dati salvati quando ho iniziato a trascinare l'oggetto'
+            var tmp = ev.originalEvent.dataTransfer;
+            var node = $(transform).append(tmp.getData("node"));
+            console.log(medea.cursor);
+            node.attr('translation', $('#cursor').attr('translation'));
 
-        // Binding click event to selection function
-        $(this).find("scene transform.selectable:last").click(medea.select);
-        return false;
-    });
+            $(this).find("scene").append(node);
+            
+            /*console.log(window.x3dom.runtime.viewpoint());
+              console.log($("#x3d_element").runtime.getActiveBindable('Viewpoint'));*/
+
+            // Binding click event to selection function
+            $(this).find("scene transform.selectable:last").click(medea.select);
+            return false;
+        }
+    }()
+    );
     
     // Plane selector
     var planeToggle = function (plane) {
@@ -179,7 +181,7 @@ $(function () {
         console.log("Ciao");
     });*/
     document.getElementById("mainscene").onclick = function (ev) {
-        medea.cursor = ev.hitPnt;
+        $('#cursor').attr('translation', ev.hitPnt);
     };
     // On scene loading i need to bind all selectable transform to the select function 
     /* again this won't work with jquery
@@ -195,6 +197,11 @@ $(function () {
     // set navigation mode to examine
     $("#examine").toggleClass("checked");
     /*x3dom.runtime.examine();*/
+
+    // add cursor to the scene
+    var cursor = '<Transform id="cursor" scale=".015 .015 .015" translation="0 1 0"><Shape><Appearance><Material diffuseColor="olivedrab" specularColor="peachpuff"/></Appearance><Sphere/></Shape></Transform>';
+
+    $('#x3d_element > scene').append(cursor);
 });
 
 
