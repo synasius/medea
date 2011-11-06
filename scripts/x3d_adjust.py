@@ -28,7 +28,7 @@ from xml.dom import minidom
 # Configuring paths
 BASE_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 X3D_PATH = os.path.join(BASE_PATH, "medea/x3d")
-TEXTURES_PATH = "../textures"
+TEXTURES_PATH = "/static/x3d/textures"
 
 
 # Setup logging
@@ -57,13 +57,13 @@ LOG = setup_logger()
 
 # Nodes to be removed
 NODES_TO_REMOVE = ("NavigationInfo", "Background", "Viewpoint")
-TEXTURE_TO_FIX = ("beer_c_png", "beer_b_png", "water_n_png", "water_s_png",
-                  "wine_r_png", "wine_w_png", "drink_cola_png", "milk_b_png",
-                  "pate_r_png", "pate_b_png", "yogurt_y_png", "yogurt_k_png", 
-                  'cheese_b_png', 'cheese_g_png', 'choco_n_png', 
-                  'choco_s_png', 'choco_h_png', 'beans_b_png', 'beans_r_png',
-                  'biscuit_straw_png', 'biscuit_choco_png', 'peas_g_png',
-                  'tuna_b_png', 'tuna_y_png', 'tuna_r_png', 'IM_beer_b_png',)
+TEXTURE_TO_FIX = ("IM_beer_c_png", "IM_beer_b_png", "IM_water_n_png", "IM_water_s_png",
+                  "IM_wine_r_png", "IM_wine_w_png", "IM_drink_cola_png", "IM_milk_b_png",
+                  "IM_pate_r_png", "IM_pate_b_png", "IM_yogurt_y_png", "IM_yogurt_k_png", 
+                  'IM_cheese_b_png', 'IM_cheese_g_png', 'IM_choco_n_png', 
+                  'IM_choco_s_png', 'IM_choco_h_png', 'IM_beans_b_png', 'IM_beans_r_png',
+                  'IM_biscuit_straw_png', 'IM_biscuit_choco_png', 'IM_peas_g_png',
+                  'IM_tuna_b_png', 'IM_tuna_y_png', 'IM_tuna_r_png', 'IM_beer_b_png',)
 
 PLANES_TO_FIX = ("G_beer_cap","G_fridge_side_panel")
 
@@ -128,8 +128,10 @@ def fix(dom):
     # Fix ImageTexture nodes
     for img in dom.getElementsByTagName("ImageTexture"):
         url = img.getAttribute("url")
+        LOG.debug("Before url %s" % url)
         url = os.path.join(TEXTURES_PATH,
-                           url.strip('"').split('" "')[0])
+                           os.path.basename(url.split('" "')[0]))
+        LOG.debug("After url %s" % url)
         img.setAttribute("url", url)
         img.setAttribute("repeatT", "false")
         img.setAttribute("repeatS", "false")

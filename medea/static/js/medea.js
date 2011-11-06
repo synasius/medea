@@ -1,12 +1,9 @@
-$(function () {
+$(document).ready(function () {
     // Loading controller
     var controller = Raphael.controller(0, 0, 200, "controller");
     
-    // object selection and movement
     medea = {};
-    //TODO: put a slide in the UI to control this parameter
-    medea.range = 1; // This defines the sensibility of the controller 
-    medea.step = 0.785; // Rotation step
+    
     medea.plane = null;
     medea.selected = null;
     medea.select = function () {
@@ -24,13 +21,18 @@ $(function () {
             }
         };
     }();
+
+
+    // object remove controller
     medea.remove = function () {
         if (!medea.selected) return;
         
         $(medea.selected).remove();
         $(".highlight").remove();
     }
+    $("#remove_bt").click(medea.remove);
     
+
     //TODO: maybe there is a better (and reliable) way to get the object translation
     //      need to investigate x3dom
     medea.getPos = function (coords) {
@@ -58,6 +60,11 @@ $(function () {
         
         return rotation;
     }
+
+
+    // object movement controller
+    //TODO: put a slide in the UI to control this parameter
+    medea.range = 1; // This defines the sensibility of the controller 
     medea.moving = function (vu, vv) {
         if (!medea.selected) return;
         
@@ -69,20 +76,28 @@ $(function () {
         pos[medea.plane[1]] += vv*medea.range;            
         $(medea.selected).attr('translation', pos.x +" "+ pos.y +" "+ pos.z);
     }
+    controller.bind(medea.moving);
+
+
+    // object rotation controller
+    medea.rotation_step = 0.785; // Rotation step
     medea.rotate = function (clockwise) {
         if (!medea.selected) return;
         
         var r = medea.getRotation($(medea.selected).attr('rotation'));
         r.y = 1;
         
-        r.g += clockwise ? -medea.step : medea.step;
+        r.g += clockwise ? -medea.rotation_step : medea.rotation_step;
         $(medea.selected).attr('rotation', r.x +" "+ r.y +" "+ r.z +" "+ r.g);
     }
+    $("#rleft").click(function (ev) {
+        medea.rotate(true);
+    });
+    $("#rright").click(function (ev) {
+        medea.rotate(false);
+    });
+    
 
-    controller.bind(medea.moving);
-    
-    $("#remove_bt").click(medea.remove);
-    
     // Drag&drop handling
     //Cambia il cursore sugli elementi trascinabili per renderli visibili
     $(".draggable").css("cursor", "move");
@@ -164,17 +179,9 @@ $(function () {
         console.log("Nav mode: "+ $(ev.target).html())
     });
     
-    // Rotation controllers
-    $("#rleft").click(function (ev) {
-        medea.rotate(true);
-    });
-    $("#rright").click(function (ev) {
-        medea.rotate(false);
-    });
-
     // cursor handle
 
-    /* there is a problem with jQuery that prevents from binding events 
+    /* FIXME: there is a problem with jQuery that prevents from binding events 
        to scene-graph nodes usin click() function. so i'm using the standard
        syntax
     $("#mainscene").click(function (ev) {
@@ -184,7 +191,7 @@ $(function () {
         $('#cursor').attr('translation', ev.hitPnt);
     };
     // On scene loading i need to bind all selectable transform to the select function 
-    /* again this won't work with jquery
+    /* FIXME: again this won't work with jquery
     $(".selectable").click(medea.select); */
     
     // Initial setup 
@@ -196,10 +203,10 @@ $(function () {
     
     // set navigation mode to examine
     $("#examine").toggleClass("checked");
-    /*x3dom.runtime.examine();*/
+    //window.x3dom.runtime.examine(); //FIXME: this is not working... why??
 
     // add cursor to the scene
-    var cursor = '<Transform id="cursor" scale=".015 .015 .015" translation="0 1 0"><Shape><Appearance><Material diffuseColor="olivedrab" specularColor="peachpuff"/></Appearance><Sphere/></Shape></Transform>';
+    var cursor = '<Transform id="cursor" scale=".015 .015 .015" translation="0 1 0"><Shape><Appearance><Material diffuseColor=".2 .6 .2" specularColor="1 1 1"/></Appearance><Sphere/></Shape></Transform>';
 
     $('#x3d_element > scene').append(cursor);
 });

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D version="3.0" profile="Immersive" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.0.xsd">
+	<head>
+		<meta name="filename" content="scaffold.x3d" />
+		<meta name="generator" content="Blender 2.60 (sub 0)" />
+	</head>
+	<Scene>
+		<NavigationInfo headlight="false"
+		                visibilityLimit="0.0"
+		                type='"EXAMINE", "ANY"'
+		                avatarSize="0.25, 1.75, 0.75"
+		                />
+		<Background DEF="WO_World"
+		            groundColor="0.0509 0.0509 0.0509"
+		            skyColor="0.0509 0.0509 0.0509"
+		            />
+		<Transform DEF="scaffoldbar_055_TRANSFORM"
+		           translation="-1.3203 1.65356 -2.79277"
+		           scale="1 1 1"
+		           rotation="-0.57735 -0.57735 0.57735 2.09439"
+		           >
+			<Transform DEF="scaffoldbar_055_TRANSFORM"
+			           translation="1.95293e-08 -7.81171e-08 -3.29596e-09"
+			           scale="1 1 1"
+			           rotation="1 0 0 0"
+			           >
+				<Group DEF="group_ME_scaffold_bar">
+					<Shape>
+						<Appearance>
+							<Material DEF="MA_steel_shiny"
+							          diffuseColor="0.367 0.367 0.367"
+							          specularColor="0.802 0.802 0.802"
+							          emissiveColor="0 0 0"
+							          ambientIntensity="0.333"
+							          shininess="0.701"
+							          transparency="0.0"
+							          />
+						</Appearance>
+						<IndexedFaceSet solid="true"
+						                coordIndex="0 8 9 1 -1 1 9 10 2 -1 2 10 11 3 -1 3 11 12 4 -1 4 12 13 5 -1 5 13 14 6 -1 6 14 15 7 -1 8 0 7 15 -1 7 0 23 16 -1 6 7 16 17 -1 5 6 17 18 -1 4 5 18 19 -1 3 4 19 20 -1 2 3 20 21 -1 1 2 21 22 -1 0 1 22 23 -1 23 22 25 24 -1 22 21 26 25 -1 21 20 27 26 -1 20 19 28 27 -1 19 18 29 28 -1 18 17 30 29 -1 17 16 31 30 -1 16 23 24 31 -1 31 24 39 32 -1 30 31 32 33 -1 29 30 33 34 -1 28 29 34 35 -1 27 28 35 36 -1 26 27 36 37 -1 25 26 37 38 -1 24 25 38 39 -1 39 38 41 40 -1 38 37 42 41 -1 37 36 43 42 -1 36 35 44 43 -1 35 34 45 44 -1 34 33 46 45 -1 33 32 47 46 -1 32 39 40 47 -1 "
+						                >
+							<Coordinate DEF="coords_ME_scaffold_bar"
+							            point="1.40141e-08 0.00798483 -0.180954 0.00546944 0.00564613 -0.18227 0.00773495 -6.75086e-09 -0.182815 0.00546944 -0.00564614 -0.18227 1.32193e-08 -0.00798485 -0.180954 -0.00546941 -0.00564614 -0.179639 -0.00773492 -6.15382e-09 -0.179094 -0.00546941 0.00564613 -0.179639 -2.57104e-08 0.00798485 0.297161 0.00564611 0.00564615 0.297161 0.00798482 1.5481e-08 0.297161 0.00564611 -0.00564612 0.297161 -2.34894e-08 -0.00798483 0.297161 -0.00564616 -0.00564612 0.297161 -0.00798486 1.58619e-08 0.297161 -0.00564615 0.00564615 0.297161 -0.0303697 0.00564613 -0.222651 -0.0323954 -6.73901e-09 -0.221554 -0.0303697 -0.00564614 -0.222651 -0.0254792 -0.00798485 -0.225299 -0.0205887 -0.00564614 -0.227948 -0.018563 -7.52959e-09 -0.229045 -0.0205887 0.00564613 -0.227948 -0.0254792 0.00798483 -0.225299 -0.0660646 0.00798483 -0.269419 -0.0631627 0.00564613 -0.273965 -0.0619607 -9.48893e-09 -0.275848 -0.0631627 -0.00564614 -0.273965 -0.0660646 -0.00798485 -0.269419 -0.0689665 -0.00564614 -0.264873 -0.0701686 -8.31011e-09 -0.26299 -0.0689665 0.00564613 -0.264873 -0.124059 0.00564612 -0.282586 -0.124059 -9.03862e-09 -0.280391 -0.124059 -0.00564614 -0.282586 -0.124059 -0.00798485 -0.287885 -0.124059 -0.00564615 -0.293184 -0.124059 -1.05672e-08 -0.295379 -0.124059 0.00564613 -0.293184 -0.124059 0.00798483 -0.287885 -0.1851 0.00798483 -0.287885 -0.1851 0.00564613 -0.293184 -0.1851 -1.05672e-08 -0.295379 -0.1851 -0.00564615 -0.293184 -0.1851 -0.00798485 -0.287885 -0.1851 -0.00564614 -0.282586 -0.1851 -9.03862e-09 -0.280391 -0.1851 0.00564612 -0.282586 "
+							            />
+						</IndexedFaceSet>
+					</Shape>
+				</Group>
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldpane_055_TRANSFORM"
+		           translation="-1.37576 1.56162 -2.79277"
+		           scale="1 1 1"
+		           rotation="-0.242536 0.970142 3.66219e-08 0"
+		           >
+			<Transform DEF="scaffoldpane_055_TRANSFORM"
+			           translation="8.92689e-09 -2.75706e-08 1.7927e-07"
+			           scale="1 1 1"
+			           rotation="0 -1 0 0"
+			           >
+				<Group DEF="group_ME_scaffold_pane">
+					<Shape>
+						<Appearance>
+							<Material DEF="MA_plastic_white"
+							          diffuseColor="1 1 1"
+							          specularColor="0.000801 0.000801 0.000801"
+							          emissiveColor="0 0 0"
+							          ambientIntensity="0.333"
+							          shininess="0.0977"
+							          transparency="0.0"
+							          />
+						</Appearance>
+						<IndexedFaceSet solid="true"
+						                coordIndex="0 1 2 3 -1 2 5 4 3 -1 7 0 3 4 -1 0 7 6 1 -1 1 6 5 2 -1 5 6 7 4 -1 "
+						                >
+							<Coordinate DEF="coords_ME_scaffold_pane"
+							            point="-0.231532 -0.0889361 0 -0.231532 0.0889361 0 0.231532 0.0889361 0 0.231532 -0.0889361 0 0.231532 -0.0889361 -0.00270086 0.231532 0.0889361 -0.00270086 -0.231532 0.0889361 -0.00270086 -0.231532 -0.0889361 -0.00270086 "
+							            />
+						</IndexedFaceSet>
+					</Shape>
+				</Group>
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffold_plane_020_TRANSFORM"
+		           translation="-1.31573 1.46157 -0.812779"
+		           scale="1 1 1"
+		           rotation="-1 1.50996e-07 1.50996e-07 1.5708"
+		           >
+			<Transform DEF="scaffold_plane_020_TRANSFORM"
+			           translation="7.03397e-09 -1.98944e-08 0"
+			           scale="1 1 1"
+			           rotation="1 0 0 0"
+			           >
+				<Group DEF="group_ME_scaffold_plane">
+					<Shape>
+						<Appearance>
+							<Material DEF="MA_paint_cream_polished"
+							          diffuseColor="0.8 0.8 0.673"
+							          specularColor="0.161 0.161 0.161"
+							          emissiveColor="0 0 0"
+							          ambientIntensity="0.333"
+							          shininess="0.0195"
+							          transparency="0.0"
+							          />
+						</Appearance>
+						<IndexedFaceSet solid="true"
+						                coordIndex="3 0 1 2 -1 7 6 4 5 -1 "
+						                >
+							<Coordinate DEF="coords_ME_scaffold_plane"
+							            point="0.3 1.99989 -0.015 0.3 -1.99989 -0.015 -0.3 -1.99989 -0.015 -0.3 1.99989 -0.015 0.3 -1.99989 0.015 0.3 1.99989 0.015 -0.3 -1.99989 0.015 -0.3 1.99989 0.015 "
+							            />
+						</IndexedFaceSet>
+					</Shape>
+					<Shape>
+						<Appearance>
+							<Material DEF="MA_steel_black"
+							          diffuseColor="0.0331 0.0331 0.0331"
+							          specularColor="0.000135 0.000135 0.000135"
+							          emissiveColor="0 0 0"
+							          ambientIntensity="0.333"
+							          shininess="0.176"
+							          transparency="0.0"
+							          />
+						</Appearance>
+						<IndexedFaceSet solid="true"
+						                coordIndex="1 0 5 4 -1 6 2 1 4 -1 0 3 7 5 -1 "
+						                >
+							<Coordinate USE="coords_ME_scaffold_plane" />
+						</IndexedFaceSet>
+					</Shape>
+				</Group>
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffold_006_TRANSFORM"
+		           translation="-1.23464 1.07373 -0.812699"
+		           scale="1 1 1"
+		           rotation="-1 0 0 1.5708"
+		           >
+			<Transform DEF="scaffold_006_TRANSFORM"
+			           translation="0 0 0"
+			           scale="1 1 1"
+			           rotation="1 0 0 0"
+			           >
+				<Group DEF="group_ME_scaffold_structur">
+					<Shape>
+						<Appearance>
+							<Material USE="MA_paint_cream_polished" />
+						</Appearance>
+						<IndexedFaceSet solid="true"
+						                coordIndex="8 9 12 13 -1 5 4 15 14 -1 18 4 5 21 -1 24 6 7 27 -1 36 31 32 37 -1 30 35 38 33 -1 39 34 33 38 -1 20 40 41 23 -1 26 42 43 29 -1 42 25 28 43 -1 8 44 45 9 -1 10 46 47 11 -1 46 26 29 47 -1 19 48 49 22 -1 25 50 51 28 -1 50 24 27 51 -1 53 10 11 54 -1 0 1 16 17 -1 34 39 58 57 -1 "
+						                >
+							<Coordinate DEF="coords_ME_scaffold_structur"
+							            point="-0.380263 2 1.075 -0.380263 -2 1.075 -0.425 -2 1.075 -0.425 2 1.075 -0.380263 2 0.859998 -0.380263 -2 0.859998 -0.425 -2 0.859998 -0.425 2 0.859998 -0.380263 2 -0.967518 -0.380263 -2 -0.967518 -0.425 -2 -0.967518 -0.425 2 -0.967518 0.425 -2 -0.967518 0.425 2 -0.967518 0.290789 -2 0.859998 0.290789 2 0.859998 0.290789 -2 1.075 0.29079 2 1.075 -0.380263 2 0.403119 -0.380263 2 -0.05376 -0.380263 2 -0.510639 -0.380263 -2 0.403119 -0.380263 -2 -0.05376 -0.380263 -2 -0.510639 -0.425 -2 0.403119 -0.425 -2 -0.05376 -0.425 -2 -0.510639 -0.425 2 0.403119 -0.425 2 -0.05376 -0.425 2 -0.510639 -0.380263 -2 1.06425 -0.425 -2 1.06425 -0.425 2 1.06425 0.290789 -2 1.06425 0.290789 2 1.06425 -0.380263 -2 0.870748 -0.425 -2 0.870748 -0.425 2 0.870748 0.290789 -2 0.870748 0.290789 2 0.870748 -0.380263 2 -0.0844058 -0.380263 -2 -0.0844058 -0.425 -2 -0.0844058 -0.425 2 -0.0844058 -0.380263 2 -0.541285 -0.380263 -2 -0.541285 -0.425 -2 -0.541285 -0.425 2 -0.541285 -0.380263 2 0.372473 -0.380263 -2 0.372473 -0.425 -2 0.372473 -0.425 2 0.372473 -0.380263 -2 -1.075 -0.425 -2 -1.075 -0.425 2 -1.075 0.425 -2 -1.075 0.425 2 -1.075 -0.380263 2 1.06425 -0.380263 2 0.870748 -0.380263 2 -1.075 "
+							            />
+						</IndexedFaceSet>
+					</Shape>
+					<Shape>
+						<Appearance>
+							<Material USE="MA_steel_black" />
+						</Appearance>
+						<IndexedFaceSet solid="true"
+						                coordIndex="0 3 2 1 -1 21 5 6 24 -1 30 1 2 31 -1 31 2 3 32 -1 1 30 33 16 -1 34 17 16 33 -1 5 35 36 6 -1 35 30 31 36 -1 6 36 37 7 -1 35 5 14 38 -1 15 39 38 14 -1 23 41 42 26 -1 41 22 25 42 -1 9 45 46 10 -1 45 23 26 46 -1 22 49 50 25 -1 49 21 24 50 -1 52 9 10 53 -1 9 52 55 12 -1 56 13 12 55 -1 0 57 32 3 -1 4 7 37 58 -1 32 57 58 37 -1 0 17 34 57 -1 4 58 39 15 -1 4 8 11 7 -1 8 59 54 11 -1 8 13 56 59 -1 "
+						                >
+							<Coordinate USE="coords_ME_scaffold_structur" />
+						</IndexedFaceSet>
+					</Shape>
+				</Group>
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldpane_054_TRANSFORM"
+		           translation="-1.37575 1.56162 1.16177"
+		           scale="1 1 1"
+		           rotation="-0.242536 0.970142 3.66219e-08 0"
+		           >
+			<Transform DEF="scaffoldpane_054_TRANSFORM"
+			           translation="6.78442e-09 3.14985e-08 -5.91488e-08"
+			           scale="1 1 1"
+			           rotation="0 -1 0 0"
+			           >
+				<Group USE="group_ME_scaffold_pane" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldbar_054_TRANSFORM"
+		           translation="-1.3203 1.65356 1.16177"
+		           scale="1 1 1"
+		           rotation="-0.57735 -0.57735 0.57735 2.09439"
+		           >
+			<Transform DEF="scaffoldbar_054_TRANSFORM"
+			           translation="1.95294e-08 4.10919e-08 -1.15348e-09"
+			           scale="1 1 1"
+			           rotation="1 0 0 0"
+			           >
+				<Group USE="group_ME_scaffold_bar" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldbar_053_TRANSFORM"
+		           translation="-1.3203 1.19684 1.16177"
+		           scale="1 1 1"
+		           rotation="-0.57735 -0.57735 0.57735 2.09439"
+		           >
+			<Transform DEF="scaffoldbar_053_TRANSFORM"
+			           translation="1.95294e-08 4.10918e-08 -3.56346e-08"
+			           scale="1 1 1"
+			           rotation="1 0 0 0"
+			           >
+				<Group USE="group_ME_scaffold_bar" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldpane_053_TRANSFORM"
+		           translation="-1.37575 1.1049 1.16177"
+		           scale="1 1 1"
+		           rotation="-0.242536 0.970142 3.66219e-08 0"
+		           >
+			<Transform DEF="scaffoldpane_053_TRANSFORM"
+			           translation="6.78442e-09 3.14985e-08 -9.36299e-08"
+			           scale="1 1 1"
+			           rotation="0 -1 0 0"
+			           >
+				<Group USE="group_ME_scaffold_pane" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffold_plane_019_TRANSFORM"
+		           translation="-1.31573 1.00485 -0.812779"
+		           scale="1 1 1"
+		           rotation="-1 1.50996e-07 1.50996e-07 1.5708"
+		           >
+			<Transform DEF="scaffold_plane_019_TRANSFORM"
+			           translation="7.03397e-09 -1.98944e-08 0"
+			           scale="1 1 1"
+			           rotation="1 0 0 0"
+			           >
+				<Group USE="group_ME_scaffold_plane" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldpane_052_TRANSFORM"
+		           translation="-1.37576 1.1049 -2.79277"
+		           scale="1 1 1"
+		           rotation="-0.242536 0.970142 3.66219e-08 0"
+		           >
+			<Transform DEF="scaffoldpane_052_TRANSFORM"
+			           translation="8.92689e-09 -2.75706e-08 1.44788e-07"
+			           scale="1 1 1"
+			           rotation="0 -1 0 0"
+			           >
+				<Group USE="group_ME_scaffold_pane" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldbar_052_TRANSFORM"
+		           translation="-1.3203 1.19684 -2.79277"
+		           scale="1 1 1"
+		           rotation="-0.57735 -0.57735 0.57735 2.09439"
+		           >
+			<Transform DEF="scaffoldbar_052_TRANSFORM"
+			           translation="1.95293e-08 -7.81172e-08 -3.77771e-08"
+			           scale="1 1 1"
+			           rotation="1 0 0 0"
+			           >
+				<Group USE="group_ME_scaffold_bar" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldbar_051_TRANSFORM"
+		           translation="-1.3203 0.740566 -2.79277"
+		           scale="1 1 1"
+		           rotation="-0.57735 -0.57735 0.57735 2.09439"
+		           >
+			<Transform DEF="scaffoldbar_051_TRANSFORM"
+			           translation="1.95293e-08 -7.81172e-08 4.69843e-08"
+			           scale="1 1 1"
+			           rotation="1 0 0 0"
+			           >
+				<Group USE="group_ME_scaffold_bar" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldpane_051_TRANSFORM"
+		           translation="-1.37576 0.648627 -2.79277"
+		           scale="1 1 1"
+		           rotation="-0.242536 0.970142 3.66219e-08 0"
+		           >
+			<Transform DEF="scaffoldpane_051_TRANSFORM"
+			           translation="8.92689e-09 -2.75706e-08 1.1034e-07"
+			           scale="1 1 1"
+			           rotation="0 -1 0 0"
+			           >
+				<Group USE="group_ME_scaffold_pane" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffold_plane_018_TRANSFORM"
+		           translation="-1.31573 0.548572 -0.812779"
+		           scale="1 1 1"
+		           rotation="-1 1.50996e-07 1.50996e-07 1.5708"
+		           >
+			<Transform DEF="scaffold_plane_018_TRANSFORM"
+			           translation="7.03397e-09 -1.98944e-08 0"
+			           scale="1 1 1"
+			           rotation="1 0 0 0"
+			           >
+				<Group USE="group_ME_scaffold_plane" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldpane_050_TRANSFORM"
+		           translation="-1.37575 0.648627 1.16177"
+		           scale="1 1 1"
+		           rotation="-0.242536 0.970142 3.66219e-08 0"
+		           >
+			<Transform DEF="scaffoldpane_050_TRANSFORM"
+			           translation="6.78442e-09 -2.81062e-08 -8.86853e-09"
+			           scale="1 1 1"
+			           rotation="0 -1 0 0"
+			           >
+				<Group USE="group_ME_scaffold_pane" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldbar_050_TRANSFORM"
+		           translation="-1.3203 0.740566 1.16177"
+		           scale="1 1 1"
+		           rotation="-0.57735 -0.57735 0.57735 2.09439"
+		           >
+			<Transform DEF="scaffoldbar_050_TRANSFORM"
+			           translation="1.95294e-08 4.10918e-08 4.91267e-08"
+			           scale="1 1 1"
+			           rotation="1 0 0 0"
+			           >
+				<Group USE="group_ME_scaffold_bar" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldbar_049_TRANSFORM"
+		           translation="-1.23193 0.336352 1.16177"
+		           scale="1.28293 1 1.28293"
+		           rotation="-0.57735 -0.57735 0.57735 2.09439"
+		           >
+			<Transform DEF="scaffoldbar_049_TRANSFORM"
+			           translation="-7.85246e-09 1.44033e-08 -4.10022e-08"
+			           scale="1 1 1"
+			           rotation="-0.91723 -0.398358 4.58605e-08 0"
+			           >
+				<Group USE="group_ME_scaffold_bar" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldpane_049_TRANSFORM"
+		           translation="-1.30307 0.218401 1.16177"
+		           scale="1.28293 1.28293 1"
+		           rotation="-0.242536 0.970142 3.66219e-08 0"
+		           >
+			<Transform DEF="scaffoldpane_049_TRANSFORM"
+			           translation="5.90901e-08 1.95946e-09 -1.38609e-07"
+			           scale="1 1 1"
+			           rotation="0.242535 -0.970143 -1.04951e-07 0"
+			           >
+				<Group USE="group_ME_scaffold_pane" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldpane_048_TRANSFORM"
+		           translation="-1.30307 0.218401 -2.79277"
+		           scale="1.28293 1.28293 1"
+		           rotation="-0.242536 0.970142 3.66219e-08 0"
+		           >
+			<Transform DEF="scaffoldpane_048_TRANSFORM"
+			           translation="8.17993e-09 -3.74354e-09 9.98096e-08"
+			           scale="1 1 1"
+			           rotation="0.242535 -0.970143 -1.04951e-07 0"
+			           >
+				<Group USE="group_ME_scaffold_pane" />
+			</Transform>
+		</Transform>
+		<Transform DEF="scaffoldbar_048_TRANSFORM"
+		           translation="-1.23193 0.336352 -2.79277"
+		           scale="1.28293 1 1.28293"
+		           rotation="-0.57735 -0.57735 0.57735 2.09439"
+		           >
+			<Transform DEF="scaffoldbar_048_TRANSFORM"
+			           translation="-7.85252e-09 -1.04806e-07 -4.96968e-08"
+			           scale="1 1 1"
+			           rotation="-0.91723 -0.398358 4.58605e-08 0"
+			           >
+				<Group USE="group_ME_scaffold_bar" />
+			</Transform>
+		</Transform>
+	</Scene>
+</X3D>
