@@ -1876,7 +1876,7 @@
 <Group DEF="G_market_floor">
 <Shape>
 <Appearance>
-<ImageTexture DEF="FloorsRegular0026_2_S" repeatS="true" repeatT="true" url="../textures/FloorsRegular0026_2_S.jpg"/>
+<ImageTexture DEF="FloorsRegular0026_2_S" repeatS="true" repeatT="true" url="/static/x3d/textures/FloorsRegular0026_2_S.jpg"/>
 <TextureTransform rotation="0.000000" scale="4.000000 4.000000" translation="0.000000 0.000000"/>
 <Material DEF="MA_inside_floor" ambientIntensity="0.333" diffuseColor="0.8 0.8 0.8" emissiveColor="0.0 0.0 0.0" shininess="0.098" specularColor="0.147 0.147 0.147" transparency="0.0"/>
 </Appearance>
@@ -2105,7 +2105,7 @@
 <Group DEF="G_wood_panel">
 <Shape>
 <Appearance>
-<ImageTexture DEF="WoodFine0007_L_jpg" repeatS="false" repeatT="false" url="../textures/WoodFine0007_L.jpg"/>
+<ImageTexture DEF="WoodFine0007_L_jpg" repeatS="false" repeatT="false" url="/static/x3d/textures/WoodFine0007_L.jpg"/>
 <TextureTransform rotation="0.000000" scale="1.000000 1.000000" translation="0.000000 0.000000"/>
 <Material DEF="MA_wood" ambientIntensity="0.333" diffuseColor="0.133 0.058 0.027" emissiveColor="0.0 0.0 0.0" shininess="0.02" specularColor="0.079 0.079 0.079" transparency="0.0"/>
 </Appearance>
