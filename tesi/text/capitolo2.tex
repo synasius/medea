@@ -220,20 +220,37 @@ $("#drop").bind("dragenter", function (ev) {
     return false;
 }).bind('dragover', function(ev) {
     return false;
-}).bind("drop", function (ev) {
-    //con questa riga ottengo i dati salvati quando ho iniziato a trascinare l'oggetto'
-    var tmp = ev.originalEvent.dataTransfer;
-    var node = $(medea.transform).append(tmp.getData("node"));
-    
-    $(this).find("scene").append(node);
+}).bind("drop", function () {
+    var transform = '<transform class="selectable" translation="0 1 0"/>';
 
-    // Binding click event to selection function
-    $(this).find("scene transform.selectable:last").click(medea.select);
-    return false;
+    return function (ev) {
+        //con questa riga ottengo i dati salvati quando ho iniziato a trascinare l'oggetto'
+        var tmp = ev.originalEvent.dataTransfer;
+        var node = $(transform).append(tmp.getData("node"));
+        node.attr('translation', $('#cursor').attr('translation'));
+
+        $(this).find("scene").append(node);
+        
+        // Binding click event to selection function
+        $(this).find("scene transform.selectable:last").click(medea.select);
+        return false;
+    }
 });
+
 \end{mylisting}
 
-Il codice può sembrare di difficile comprensione; in realtà la parte interessante è nelle due funzioni che gestiscono gli eventi ``dragstart'' e ``drop''. La prima specifica le azioni da intraprendere quando inizia un'azione di trascinamento. In questo caso viene memorizzato il contenuto html dell'elemento trascinato nell'oggetto \texttt{dataTransfer}\footnote{L'oggetto dataTransfer può essere visto come un'area di comunicazione condivisa disponibile solo se si verifica uno degli eventi legati al drag'n drop} con la chiave "node". Nel contenuto html dell'elemento ``draggable'' è stato preventivamente predisposto dal server il tag \texttt{<inline>} che fa riferimento all'oggetto. La funzione legata al ``drop'' a questo punto non fa altro che recuperare il contenuto del \texttt{dataTransfer} con la stessa chiave, lo inserisce in un un nodo \texttt{<transform>} selezionabile e lo incorpora nella scena X3D.
+Il codice può sembrare di difficile comprensione; in realtà la parte interessante è nelle due funzioni che gestiscono gli eventi ``dragstart'' e ``drop''. La prima specifica le azioni da intraprendere quando inizia un'azione di trascinamento. In questo caso viene memorizzato il contenuto html dell'elemento trascinato nell'oggetto \texttt{dataTransfer}\footnote{L'oggetto dataTransfer può essere visto come un'area di comunicazione condivisa disponibile solo se si verifica uno degli eventi legati al drag'n drop} con la chiave "node". Nel contenuto html dell'elemento ``draggable'' è stato preventivamente predisposto dal server il tag \texttt{<inline>} che fa riferimento all'oggetto. La funzione legata al ``drop'' a questo punto non fa altro che recuperare il contenuto del \texttt{dataTransfer} con la stessa chiave, lo inserisce in un un nodo \texttt{<transform>} selezionabile e lo incorpora nella scena X3D. 
+Le coordinate di posizionamento dell'oggetto appena inserito sono definite da un ``cursore di posizionamento'', un indicatore collocabile dall'utente su una qualsiasi superfice presente nella scena, semplicemente cliccandovi. Questo è reso possibile grazie ad una caratteristica del motore x3dom, il quale, per ogni evento onclick rilevato nel canvas, riporta nell'event object passato in input alle funzioni di callback le coordinate dell'hitpoint, ovvero il punto nello spazio 3d della prima superifice su cui ``impatta'' il raggio proiettato dal click dell'utente. Il listato ~\ref{lst:medeajs4} mostra la creazione del cursore, in questo caso una semplice sfera, e la connessione della callback di posizionamento del cursore all'evento onclick della scena.
+
+\begin{mylisting}{Java}{Medea client: il Drag'n Drop}{lst:medeajs4}
+var cursor = '<Transform id="cursor" scale=".015 .015 .015" translation="0 1 0"><Shape><Appearance><Material diffuseColor=".2 .6 .2" specularColor="1 1 1"/></Appearance><Sphere/></Shape></Transform>';
+
+document.getElementById("mainscene").onclick = function (ev) {
+    $('#cursor').attr('translation', ev.hitPnt);
+};
+\end{mylisting}
+
+Grazie a questa funzionalità il lavoro di posizionamento degli oggetti che l'utente deve svolgere viene semplificato ulteriormente: questi può facilmente selezionare un punto su di una superficie, ad esempio un tavolo, e trascinare un oggetto nella scena che verrà collocato immediatamente sopra il tavolo, senza che l'utente si preoccupi di allineare manualmente l'oggetto alla superficie.  
 
 Ultime funzioni degne di nota sono \texttt{medea.rotate} e \texttt{medea.moving} nel listato ~\ref{lst:medeajs3}. La prima manipola l'attributo \texttt{rotation} del nodo selezionato e viene banalmente agganciata al click dei pulsanti con id ``rleft'' e ``rright''. La seconda, più interessante, calcola la posizione dell'elemento selezionato sulla base dei due parametri in input \texttt{vu} e \texttt{vv}. La funzione si aspetta che questi valori siano compresi tra 0 e 1 per essere poi moltiplicati per la variabile \texttt{medea.range}, che ne definisce dunque la sensibilità. \texttt{medea.moving} viene passata come funzione di ``callback'' al controller, il quale, ad ogni variazione, la richiamerà impostando opportunamente i due valori richiesti in input.
 

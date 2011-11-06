@@ -29,6 +29,8 @@ $(document).ready(function () {
         
         $(medea.selected).remove();
         $(".highlight").remove();
+
+        medea.selected = null;
     }
     $("#remove_bt").click(medea.remove);
     

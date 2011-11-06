@@ -414,6 +414,7 @@ $(function () {
         //con questa riga ottengo i dati salvati quando ho iniziato a trascinare l'oggetto'
         var tmp = ev.originalEvent.dataTransfer;
         var node = $(medea.transform).append(tmp.getData("node"));
+        node.attr('translation', $('#cursor').attr('translation'));
         
         $(this).find("scene").append(node);
         
@@ -468,6 +469,14 @@ $(function () {
     // set navigation mode to examine
     $("#examine").toggleClass("checked");
     //window.x3dom.runtime.examine();
+
+    document.getElementById("mainscene").onclick = function (ev) {
+        $('#cursor').attr('translation', ev.hitPnt);
+    };
+    // add cursor to the scene
+    var cursor = '<Transform id="cursor" scale=".015 .015 .015" translation="0 1 0"><Shape><Appearance><Material diffuseColor=".2 .6 .2" specularColor="1 1 1"/></Appearance><Sphere/></Shape></Transform>';
+
+    $('#x3d_element > scene').append(cursor);
 });
 \end{mylisting}
 
