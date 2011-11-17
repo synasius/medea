@@ -6,14 +6,14 @@ In questa seconda parte si analizzerà il software Medea realizzato per il proge
 
 \section{Prerequisiti}
 Per poter utilizzare il software Medea è necessario un browser di ultima ge\-nerazione che supporti le tecnologie HTML5, WebGL e il relativo Context. Attualmente i layout engines che soddisfano questi requisiti sono Gecko e WebKit vale a dire, elencando solo i browser più popolari che ne fanno uso, Firefox, Chrome e Safari. 
-\'{E} inoltre necessario disporre di una scheda grafica e relativi driver che supportino come minimo la specifica OpenGL 2.0 o in alternativa, per gli utenti Windows, l'ultima versione delle DirectX\footnote{Lesson 0: Getting started with WebGL. In \textit{Learning WebGL Blog}. Retrieved 21:00, August 31, 2011, from \url{http://learningwebgl.com/blog/?p=11}}. Va aggiunto che per usufruire agevolmente del software è necessario, soprattutto per quanto riguarda il rendering 3d, che il sistema non rasenti i requisiti minimi, pena una navigazione lenta che costringe spesso al riavvio del browser. Sono caldamente raccomandate schede grafiche ATI e NVidia con gli ultimi driver al seguito, specialmente per sistemi Linux. I driver disponibili per hardware Intel, malgrado supportino WebGL, utilizzano il rendering via software per la visualizzazione delle scene, che risulta accettabile per immagini di piccole dimensioni con pochi oggetti, ma si rivela assolutamente inadatto per visualizzare ambienti complessi con numerosi poligoni.
+\'{E} inoltre necessario disporre di una scheda grafica e relativi driver che supportino come minimo la specifica OpenGL 2.0 o in alternativa, per gli utenti Windows, l'ultima versione delle DirectX\footnote{Lesson 0: Getting started with WebGL. In \textit{Learning WebGL Blog}. Retrieved 21:00, August 31, 2011, from \url{http://learningWebgl.com/blog/?p=11}}. Va aggiunto che per usufruire agevolmente del software è necessario, soprattutto per quanto riguarda il rendering 3D, che il sistema non rasenti i requisiti minimi, pena una navigazione lenta che costringe spesso al riavvio del browser. Sono caldamente raccomandate schede grafiche ATI e NVidia con driver aggiornati, specialmente per sistemi Linux. I driver disponibili per hardware Intel, malgrado supportino WebGL, utilizzano il rendering via software per la visualizzazione delle scene, che risulta accettabile per immagini di piccole dimensioni con pochi oggetti, ma si rivela assolutamente inadatto per visualizzare ambienti complessi con numerosi poligoni.
 
 
 \section{Strumenti di sviluppo}
 L'ambiente di sviluppo è costituito da una macchina su cui gira il si\-stema operativo GNU/Linux Ubuntu 11.04. La macchina monta una scheda grafica Intel GMA 4500MHD, un hardware che non brilla certo per le sue prestazioni. Proprio per questo è servito anche ad evidenziare quelli che sono i limiti a livello di fruibilità dell'applicazione.
 
 \subsection{Aptana Studio IDE}
-Aptana Studio è un Integrated Development Environment opensource improntato allo svillupo di web applications Ajax. Integra già ora il supporto a tecnologie base quali HTML5 e CSS3, DOM e Javascript. Inoltre fornisce gli strumenti per utilizzare importanti framework per applicazioni web quali Ruby on Rails, PHP, Python e Perl. Basato su un solido progetto quale Eclipse, è gratuito e multipiattaforma, ed offre funzionalita di code-completion, code-assist, debugging avanzato e molte altre. 
+Aptana Studio è un Integrated Development Environment opensource improntato allo svillupo di Web applications Ajax. Integra già ora il supporto a tecnologie base quali HTML5 e CSS3, DOM e Javascript. Inoltre fornisce gli strumenti per utilizzare importanti framework per applicazioni Web quali Ruby on Rails, PHP, Python e Perl. Basato su un solido progetto quale Eclipse, è gratuito e multipiattaforma, ed offre funzionalita di code-completion, code-assist, debugging avanzato e molte altre. 
 
 \begin{figure}[Ht]
 \centering
@@ -23,7 +23,7 @@ Aptana Studio è un Integrated Development Environment opensource improntato all
 \end{figure}
 
 \subsection{Blender per il modeling 3D}
-Lo scoglio più grande da superare quando si parla di modellazione 3d è sicuramente quello di trovare un valido tool di supporto a questo difficile compito, in modo particolare se si ha a che fare con oggetti e scene complesse. In questi casi occorre uno strumento che consenta visivamente di modellare le mesh fin nei minimi dettagli. Vi sono molti software proprie\-tari che potrebbero risolvere il problema, ma il prezzo è spesso proibitorio e non sono multipiattaforma. Viene in nostro soccorso Blender, un software per la grafica 3D gratuito, opensource, che supporta molteplici sistemi operativi.
+Lo scoglio più grande da superare quando si parla di modellazione 3D è sicuramente quello di trovare un valido tool di supporto a questo difficile compito, in modo particolare se si ha a che fare con oggetti e scene complesse. In questi casi occorre uno strumento che consenta visivamente di modellare le forme fin nei minimi dettagli. Vi sono molti software proprie\-tari che potrebbero risolvere il problema, ma il prezzo è spesso proibitivo e non sono multipiattaforma. Viene in nostro soccorso Blender, un software per la grafica 3D gratuito, opensource, che supporta molteplici sistemi operativi.
 
 Nato dalla mente di Ton Roosendal nel 1995 all'interno dello studio di animazione NeoGeo, nel 1998 viene rilasciato come prodotto freeware allo scopo di stimolare interesse da parte degli utenti e quindi offrire servizi di supporto a pagamento. Malgrado l'interesse suscitato e l'enorme community che si era creata intorno, NaN (Not a Number), la società che distribuiva Blender, va in bancarotta nel 2002. Roosendaal però non voleva abbandonare Blender al proprio destino e fonda la “Blender Foundation” con lo scopo di  portarne avanti lo sviluppo. Nel Luglio 2002 parte la campagna “Free Blender”, il cui intento é raccogliere i fondi (100.000\euro) per riacquistare i diritti su Blender e rilasciarlo poi come open source. C'è un'enorme risposta da parte della community e il 13 Ottobre 2002, circa due mesi dopo, l'obiettivo é raggiunto. Blender viene rilasciato con licenza GPL.
 
@@ -39,11 +39,11 @@ Blender integra inoltre un comodo exporter verso numerosi formati, tra cui anche
 \end{figure}
 
 \subsection{SVG con Raphael JavaScript Library}
-Merita di essere citata tra gli strumenti utilizzati anche RaphaelJS. Questa piccola libreria da la possibilità allo sviluppatore di creare attraverso codice Javascript elementi di grafica vettoriale all'interno della pagina web. Alla base c'è lo standard SVG, il markup language per la descrizione di contenuti 2D dichiarativi. Raphael espone dei metodi per il disegno che altro non fanno che creare all'interno del DOM il rispettivo scene-graph SVG (vedi il listato ~\ref{lst:raphael}. Ogni oggetto creato nel DOM è connesso ad un oggetto Javascript e può essere manipolato con facilità, sia grazie agli eventi HTML che da Javascript stesso.
+Merita di essere citata tra gli strumenti utilizzati anche RaphaelJS. Questa piccola libreria da la possibilità allo sviluppatore di creare attraverso codice Javascript elementi di grafica vettoriale all'interno della pagina Web. Alla base c'è lo standard SVG, il markup language per la descrizione di contenuti 2D dichiarativi. Raphael espone dei metodi per il disegno che altro non fanno che creare all'interno del DOM il rispettivo scene-graph SVG (vedi il listato ~\ref{lst:raphael}). Ogni oggetto creato nel DOM è connesso ad un oggetto Javascript e può essere manipolato con facilità, sia grazie agli eventi HTML che da Javascript stesso.
 
 L'obiettivo finale di Raphael, come dice il suo autore Dmitry Baranovskiy, è quello di fornire un libreria per il disegno vettoriale che possa garantire compatibilità cross-browser e al tempo stesso facilità d'uso.
 
-In questo progetto Raphael è stato utilizzato per dar vita ad un controller interattivo che consentisse all'utente di spostare un oggetto all'interno della scena 3d e che fosse allo stesso tempo semplice ed intuitivo. L'intento era anche quello di ``pensionare'' una volta per tutte i tanto abusati slider.
+In questo progetto Raphael è stato utilizzato per dar vita ad un controller interattivo che consentisse all'utente di spostare un oggetto all'interno della scena 3D e che fosse allo stesso tempo semplice ed intuitivo. L'intento era anche quello di ``pensionare'' una volta per tutte i tanto abusati slider.
 
 \begin{mylisting}{html}{Esempio di utilizzo della libreria RaphaelJS}{lst:raphael}
 // Crea una tela su cui disegnare 400x300 at 10, 10
@@ -55,28 +55,29 @@ rect.attr("fill", "#f00"); // Lo riempe con il colore rosso
 \end{mylisting}
 
 \section{Caso d'uso}
-L'idea alla base di questo progetto è quella di fornire all'utente un'ambiente che gli consenta di navigare in un mondo virtuale, con la possibilità di collocarvi degli oggetti a piacere. Le scene a disposizione e gli oggetti faranno parte di una libreria che verrà creata in base alle specifiche esigenze. L'obiettivo del progetto è difatti quello di sviluppare la struttura che consenta di contenere le scene e di inserire e muovere gli oggetti, e non quello di disegnare gli oggetti stessi. Va da se che un caso concreto è stato comunque creato. Come ambiente di prova è stato modellato un minimarket e alcuni dei relativi prodotti. Nelle figure ~\ref{label:marketbrout} e ~\ref{label:marketbrin} si possono vedere due rendering dell'ambiente creato, effettuati con blender.
+L'idea alla base di questo progetto è quella di fornire all'utente la ricostruzione in realt\`a virtuale di un supermercato e di svolgere una semplice funzione riabilitativa, quale ``Prendi una bottiglia di Coca-Cola dallo scaffale''. Questa scena deve essere ``costruita'' dal terapista, il quale in base alla lesione neurologica del paziente, al tipo di riabilitazione neurologica decisa con lo staff medico, conoscendo le preferenze ed i gusti del paziente, decider\`a di realizzare l'ambientazione maggiormente appropriata, ponendo nello scaffale gli oggetti disponibili nella libreria acceduta dall'ambiente di backoffice. 
+Come prototipo è stato modellato con Blender un minimarket e alcuni dei relativi prodotti. Nelle figure ~\ref{label:marketbrout} e ~\ref{label:marketbrin} si possono vedere due rappresentazioni dell'ambiente creato.
 
 \begin{figure}[Ht]
 \centering
 \includegraphics[width=0.7\textwidth]{marketbrout.png}
-\caption{Market rendering: esterno}
+\caption{Rappresentazione del Supermercato: esterno}
 \label{label:marketbrout}
 \end{figure}
 
 \begin{figure}[Ht]
 \centering
 \includegraphics[width=0.7\textwidth]{marketbrin.png}
-\caption{Market rendering: interno}
+\caption{Rappresentazione del Supermercato:  interno}
 \label{label:marketbrin}
 \end{figure}
 
-L'interfaccia, come già anticipato, sarà il browser e tutti i contenuti dovranno essere fruibili direttamente dalla pagina web, che si comporrà di tre componenti fondamentali: il canvas per la scena 3d, un controller per la navigazione, lo spostamento, rotazione e rimozione degli oggetti, e la lista degli oggetti presenti in libreria da poter inserire nella scena. Infine serve un motore che faccia da collante e tenga insieme il tutto. In Figura ~\ref{label:mockupui} si può vedere una bozza dell'interfaccia utente finale. Non tutte le features presentate saranno implementate in questo progetto. 
-
-Quest'interfaccia mira ad essere semplice ed immediata per l'utente, operando alcune scelte fondamentali:
+L'interfaccia di backoffice \`e rappresentata dalla pagina Web, dalla quale tutti i contenuti dovranno essere fruibili. La pagina \`e costituita da tre componenti fondamentali: il canvas per la scena 3D, un controller per la navigazione, lo spostamento, rotazione e rimozione degli oggetti, e la lista degli oggetti presenti in libreria da poter inserire nella scena.  In Figura ~\ref{label:mockupui} si può vedere una bozza dell'interfaccia utente finale. 
+Una volta realizzato l'ambiente desiderato, il terapista effettuer\`a l'export della scena X3D che costituisce l'esercizio che il paziente dovr\`a svolgere per la riabilitazione neurologica.
+ L'interfaccia realizzata mira ad essere semplice ed immediata per il terapista, operando alcune scelte fondamentali:
 \begin{itemize}
     \item Utilizzo del Drag 'n Drop HTML5 per l'inserimento degli oggetti di libreria nella scena;
-    \item Controller SVG semplificato ed intuitivo in sostituzione dei classici slider;
+    \item Controller SVG semplificato ed intuitivo per lo spostamento degli oggetti nella scena.
 \end{itemize}
 
 \begin{figure}[Ht]
@@ -90,7 +91,7 @@ Quest'interfaccia mira ad essere semplice ed immediata per l'utente, operando al
 \section{Le caratteristiche tecniche}
 
 \subsection{La struttura}
-Medea si divide in due parti: client e server. La parte client è tenuta insieme da un motore javascript che si occupa dell'interazione utente in tutti i suoi aspetti. Dalla creazione del controller, alla gestione del darg 'n drop e della posizione degli oggetti nella scena. Il lato server è mantenuto estremamente semplice e al momento si preoccupa solo di caricare dinamicamente la libreria degli oggetti.
+Medea si divide in due parti: client e server. La parte client è tenuta insieme da un motore javascript che si occupa dell'interazione utente in tutti i suoi aspetti. Dalla creazione del controller, alla gestione del ``drag 'n drop'' e della posizione degli oggetti nella scena. Il lato server è mantenuto estremamente semplice e al momento si preoccupa solo di caricare dinamicamente la libreria degli oggetti.
 
 Per una maggiore chiarezza della struttura del progetto, di seguito viene mostrata l'organizzazione nel filesystem con le componenti principali in evidenza:
 
@@ -103,18 +104,18 @@ medea
 |   |-- css
 |   |-- images
 |   |-- js
-|   o-- x3d
+|   o-- X3D
 |       |-- library     # Libreria oggetti
 |       |-- market      # Scena minimarket
 |       o-- textures
-|-- templates           # Template html utilizzati
+|-- templates           # Template HTML utilizzati
 |   o-- editor.html     
-o-- view.py             # Modulo di rendering dei template html
+o-- view.py             # Modulo di rendering dei template HTML
 \end{mylisting}
 
 
 \subsection{Il server: Webpy framework}
-Alla base del software Medea c'è Webpy, un framework Python per creare web-application dinamiche. Webpy ci consente di creare un mapping tra url e oggetti python, che serviranno le richieste fatte dal client. Il codice server creato è semplice e di immediata comprensione. 
+Alla base del software Medea c'è Webpy, un framework Python per creare Web-application dinamiche. Webpy ci consente di creare un mapping tra URL e oggetti Python, che serviranno le richieste fatte dal client. Il codice server creato è semplice e di immediata comprensione. 
 
 \begin{mylisting}{python}{Medea server}{lst:medeaserver}
 import web, os
@@ -134,25 +135,25 @@ def parse_library(path):
     import fnmatch
     files = map(lambda x: os.path.join(path,x), os.listdir(path)) 
     
-    inlines = sorted(fnmatch.filter(files, "*.x3d"))
+    inlines = sorted(fnmatch.filter(files, "*.x3D"))
     thumbs = sorted(fnmatch.filter(files, "*.png"))
 
     return zip(inlines, thumbs)
 \end{mylisting}
 
-Il modulo python \texttt{web} è il cuore del framework e ci consente di creare l'oggetto \texttt{application} che si occuperà di servire le richieste, secondo il mapping definito a linea 6. In questo caso la mappatura è elementare: sono consentite solo richieste indirizzate alla 'root' e queste vengono servite da un'istanza della classe \texttt{editor}, la quale definisce un comportamento per il solo metodo HTTP GET.
+Il modulo Python \texttt{web} è il cuore del framework e ci consente di creare l'oggetto \texttt{application} che si occuperà di servire le richieste, secondo il mapping definito a linea 6. In questo caso la mappatura è elementare: sono consentite solo richieste indirizzate alla 'root' e queste vengono servite da un'istanza della classe \texttt{editor}, la quale definisce un comportamento per il solo metodo HTTP GET.
 
-Questo metodo carica tutti i file di libreria, collocata in un path specificato nel modulo di configurazione, chiamando la funzione \texttt{parse-library}. Dopodich\'{e} renderizza il template \texttt{editor.html} passandogli come parametro la lista ottenuta e restituisce il risultato al client. Il listato ~\ref{lst:library} mostra un estratto del template, in particolare la parte in cui viene creata la libreria. Il motore di templating utilizza il carattere '\$' come escape per includere codice python all'interno della pagina html. Quando il template viene processato il codice incluso viene riconosciuto ed eseguito per generare la pagina dinamicamente. \'{E} possibile passare al template dei parametri in input. In questo caso viene fornita la lista degli oggetti in libreria. Ogni oggetto contiene l'url del file x3d e dell'immagine. Il ciclo \texttt{\$for x3d, thumb in library} produce un elemento \texttt{<li>} con questi dati.
+Questo metodo carica tutti i file di libreria, collocata in un path specificato nel modulo di configurazione, chiamando la funzione \texttt{parse-library}. Dopodich\'{e} rappresenta il template \texttt{editor.html} passandogli come parametro la lista ottenuta e restituisce il risultato al client. Il Listing ~\ref{lst:library} mostra un estratto del template, in particolare la parte in cui viene creata la libreria. L'applicazione utilizza il carattere '\$' come escape per includere codice Python all'interno della pagina HTML. Quando il template viene processato il codice incluso viene riconosciuto ed eseguito per generare la pagina dinamicamente. \'{E} possibile passare al template dei parametri in input. In questo caso viene fornita la lista degli oggetti in libreria. Ogni oggetto contiene l'url del file x3D e dell'immagine. Il ciclo \texttt{\$for x3D, thumb in library} produce un elemento \texttt{<li>} con questi dati.
 
 \begin{mylisting}{html}{Medea: template libreria}{lst:library}        
 <div id="library" class="grid_12">
         $if library:
             <ul>
-            $for x3d, thumb in library:        
+            $for x3D, thumb in library:        
                 <li>
                     <div class="grid_1 draggable">
                         <img src="$thumb" width="50px"></img>
-                        <inline url="$x3d"></inline>
+                        <inline url="$x3D"></inline>
                     </div>
                 </li>
             </ul>
@@ -194,13 +195,13 @@ medea.remove = function () {
     $(medea.selected).remove();
     $(".highlight").remove();
 }
-$("#x3d_element transform.selectable").click(medea.select);
+$("#x3D_element transform.selectable").click(medea.select);
 $("#remove_bt").click(medea.remove);
 \end{mylisting}
 
-\texttt{medea.js} è eseguito alla fine del caricamento della pagina. Il primo ad essere creato è il controller, del quale saranno dati i dettagli implementativi più avanti. Il metodo \texttt{Raphael.controller} prende in input la posizione (coordinate x, y), la dimensione e l'id dell'elemento HTML nel quale disegnare il controller. Vengono poi inizializzati alcuni parametri che specificano la sensibilità del controller durante il movimento, il piano su cui l'oggetto si muove e lo step di rotazione degli oggetti in radianti. La rotazione è stata vincolata sul solo asse y a step di 45 gradi per facilitare l'utente nel posizionamento. Segue la funzione \texttt{medea.select} che gestisce il click sull'oggetto della scena 3d marcandolo come selezionato, sia internamente, valorizzando la variabile di stato \texttt{medea.selected} con il rispettivo oggetto javascript, sia visivamente per l'utente, aggiungendo una sfera semitrasparente intorno all'oggetto. Nelle ultime due istruzioni le funzioni sopra descritte vengno connesse agli eventi degli elementi che li gestiscono. Da notare che per la selezione la funzione \texttt{medea.select} viene agganciata ai soli nodi transform che abbiano classe \texttt{selectable}, così da impedire all'utente di spostare qualsiasi mesh presente nell'ambiente.
+\texttt{medea.js} è eseguito alla fine del caricamento della pagina. Il primo ad essere creato è il controller, del quale saranno dati i dettagli implementativi più avanti. Il metodo \texttt{Raphael.controller} prende in input la posizione (coordinate x, y), la dimensione e l'id dell'elemento HTML nel quale disegnare il controller. Vengono poi inizializzati alcuni parametri che specificano la sensibilità del controller durante il movimento, il piano su cui l'oggetto si muove e lo step di rotazione degli oggetti in radianti. La rotazione è stata vincolata sul solo asse y a step di 45 gradi per facilitare l'utente nel posizionamento. Segue la funzione \texttt{medea.select} che gestisce il click sull'oggetto della scena 3D marcandolo come selezionato, sia internamente, valorizzando la variabile di stato \texttt{medea.selected} con il rispettivo oggetto javascript, sia visivamente per l'utente, aggiungendo una sfera semitrasparente intorno all'oggetto. Nelle ultime due istruzioni le funzioni sopra descritte vengno connesse agli eventi degli elementi che li gestiscono. Da notare che per la selezione la funzione \texttt{medea.select} viene agganciata ai soli nodi transform che abbiano classe \texttt{selectable}, così da impedire all'utente di spostare qualsiasi mesh presente nell'ambiente.
 
-L'inserimento viene gestito grazie al Drag'n Drop che HTML5 implementa nativamente. Nella pratica, ogni elemento che abbia l'attributo \texttt{drag\-gable} impostato a \texttt{true} è trascinabile. Di seguito il codice che gestisce questa funzionalità.
+L'inserimento viene gestito grazie al ``Drag'n Drop'' che HTML5 implementa nativamente. Nella pratica, ogni elemento che abbia l'attributo \texttt{drag\-gable} impostato a \texttt{true} è trascinabile. Di seguito il codice che gestisce questa funzionalità.
 
 \begin{mylisting}{Java}{Medea client: il Drag'n Drop}{lst:medeajs2}
 //Indica al browser quali elementi sono trascinabili, in questo caso attraverso una classe.
@@ -239,8 +240,8 @@ $("#drop").bind("dragenter", function (ev) {
 
 \end{mylisting}
 
-Il codice può sembrare di difficile comprensione; in realtà la parte interessante è nelle due funzioni che gestiscono gli eventi ``dragstart'' e ``drop''. La prima specifica le azioni da intraprendere quando inizia un'azione di trascinamento. In questo caso viene memorizzato il contenuto html dell'elemento trascinato nell'oggetto \texttt{dataTransfer}\footnote{L'oggetto dataTransfer può essere visto come un'area di comunicazione condivisa disponibile solo se si verifica uno degli eventi legati al drag'n drop} con la chiave "node". Nel contenuto html dell'elemento ``draggable'' è stato preventivamente predisposto dal server il tag \texttt{<inline>} che fa riferimento all'oggetto. La funzione legata al ``drop'' a questo punto non fa altro che recuperare il contenuto del \texttt{dataTransfer} con la stessa chiave, lo inserisce in un un nodo \texttt{<transform>} selezionabile e lo incorpora nella scena X3D. 
-Le coordinate di posizionamento dell'oggetto appena inserito sono definite da un ``cursore di posizionamento'', un indicatore collocabile dall'utente su una qualsiasi superfice presente nella scena, semplicemente cliccandovi. Questo è reso possibile grazie ad una caratteristica del motore x3dom, il quale, per ogni evento onclick rilevato nel canvas, riporta nell'event object passato in input alle funzioni di callback le coordinate dell'hitpoint, ovvero il punto nello spazio 3d della prima superifice su cui ``impatta'' il raggio proiettato dal click dell'utente. Il listato ~\ref{lst:medeajs4} mostra la creazione del cursore, in questo caso una semplice sfera, e la connessione della callback di posizionamento del cursore all'evento onclick della scena.
+Il codice può sembrare di difficile comprensione; in realtà la parte interessante è nelle due funzioni che gestiscono gli eventi ``dragstart'' e ``drop''. La prima specifica le azioni da intraprendere quando inizia un'azione di trascinamento. In questo caso viene memorizzato il contenuto HTML dell'elemento trascinato nell'oggetto \texttt{dataTransfer}\footnote{L'oggetto dataTransfer può essere visto come un'area di comunicazione condivisa disponibile solo se si verifica uno degli eventi legati al drag'n drop} con la chiave "node". Nel contenuto HTML dell'elemento ``draggable'' è stato preventivamente predisposto dal server il tag \texttt{<inline>} che fa riferimento all'oggetto. La funzione legata al ``drop'' a questo punto non fa altro che recuperare il contenuto del \texttt{dataTransfer} con la stessa chiave, lo inserisce in un un nodo \texttt{<transform>} selezionabile e lo incorpora nella scena X3D. 
+Le coordinate di posizionamento dell'oggetto appena inserito sono definite da un ``cursore di posizionamento'', un indicatore collocabile dall'utente su una qualsiasi superfice presente nella scena, semplicemente cliccandovi. Questo è reso possibile grazie ad una caratteristica del motore X3DOM, il quale, per ogni evento onclick rilevato nel canvas, riporta nell'event object passato in input alle funzioni di callback le coordinate dell'hitpoint, ovvero il punto nello spazio 3D della prima superifice su cui ``impatta'' il raggio proiettato dal click dell'utente. Il listato ~\ref{lst:medeajs4} mostra la creazione del cursore, in questo caso una semplice sfera, e la connessione della callback di posizionamento del cursore all'evento onclick della scena.
 
 \begin{mylisting}{Java}{Medea client: il Drag'n Drop}{lst:medeajs4}
 var cursor = '<Transform id="cursor" scale=".015 .015 .015" translation="0 1 0"><Shape><Appearance><Material diffuseColor=".2 .6 .2" specularColor="1 1 1"/></Appearance><Sphere/></Shape></Transform>';
@@ -358,9 +359,9 @@ Quello che si è cercato di fare è creare un elemento che estende le funzionali
 Il listato ~\ref{lst:controllerjs1} mostra la crezione dell'area di controllo, tralasciando la parte di disegno, specifica della libreria Raphael. Vengono invece riportate i metodi che gestiscono il trascinamento del cursore per mostrare come sono state agganciate le callback. Oltre alla funzione \texttt{movecback} è stata prevista la possibilità di fornire, sempre tramite il metodo \texttt{Controller.bind}, due funzioni per gli eventi di ``dragstart'' e ``dragstop''.
 
 \subsection{L'interfaccia finale}
-Non resta altro che mettere insieme i pezzi del puzzle. Con poche righe di codice, si carica il motore x3dom.js, responsabile dell'integrazione e del rendering della scena X3D. Al caricamento della pagina, X3DOM verifica la presenza di un tag \texttt{<x3d>} nel DOM della pagina e, qualora fosse presente, aggiunge un elemento \texttt{canvas} per la visualizzazione della scena tramite WebGL. Nel listato ~\ref{lst:editorx3d} la scena x3d è inclusa direttamente nella pagina. Ciò non toglie che sarebbe auspicabile una funzione lato server che la carichi dinamicamente all'interno di un \texttt{<div>} predefinito, similmente a quanto fatto per la gestione della libreria.
+La costruzione dell'applicazione avviene mediante caricamento del motore x3Dom.js, responsabile dell'integrazione e del rendering della scena X3D. Al caricamento della pagina, X3DOM verifica la presenza di un tag \texttt{<x3D>} nel DOM della pagina e, qualora fosse presente, aggiunge un elemento \texttt{canvas} per la visualizzazione della scena tramite WebGL. Nel listato ~\ref{lst:editorx3D} la scena x3D è inclusa direttamente nella pagina. Ciò non toglie che sarebbe auspicabile una funzione lato server che la carichi dinamicamente all'interno di un \texttt{<div>} predefinito, similmente a quanto fatto per la gestione della libreria.
 
-\begin{mylisting}{html}{Medea: editor.html}{lst:editorx3d}
+\begin{mylisting}{html}{Medea: editor.html}{lst:editorx3D}
 <!DOCTYPE html>
 <html>
     <head>
@@ -381,14 +382,14 @@ Non resta altro che mettere insieme i pezzi del puzzle. Con poche righe di codic
                     <background skyColor='0 0 0'></background>
                     <navigationinfo headlight="true" type="EXAMINE" avatarSize="0.25, 0.75, 0.75"></navigationinfo>
                     <viewpoint DEF='FrontView' description='Front View' position='0.01 0.80 2.80'></viewpoint>
-                    <inline url="x3d/market/minimarket_out.x3d"></inline>
+                    <inline url="x3D/market/minimarket_out.x3D"></inline>
                 </scene>
             </x3d> 
         </div>
 \end{mylisting}
 
-La Figura ~\ref{label:medeaui01} mostra l'interfaccia utente finale del software Medea, mentre in Figura ~\ref{label:medeaui02} è immortalato un utente in fase di posizionamento dell'oggetto selezionato.
-\clearpage
+La Figura ~\ref{label:medeaui01} mostra l'interfaccia utente finale del software Medea, mentre in Figura ~\ref{label:medeaui02} è rappresentato un utente in fase di posizionamento dell'oggetto selezionato.
+%\clearpage
 
 \begin{figure}[Ht]
 \centering
